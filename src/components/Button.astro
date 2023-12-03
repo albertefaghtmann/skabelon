@@ -1,0 +1,21 @@
+---
+const { text } = Astro.props;
+---
+
+<button>
+  <a>{text}</a>
+</button>
+
+<style>
+  button {
+    padding: var(--spacing-xsmall-knap) var(--spacing-small-knap);
+    border: none;
+    border-radius: var(--spacing-space-xsmall);
+    background: var(--color-red-300);
+    text-align: center;
+  }
+  a {
+    color: var(--color-gray-50);
+    font-family: "Campton-Bold";
+  }
+</style>

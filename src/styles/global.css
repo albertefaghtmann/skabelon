@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Mode 1 */
+  /* colors */
+  --color-blue-100: #bebed6;
+  --color-blue-200: #1f1f6d;
+  --color-blue-300: #0c0c2c;
+  --color-blue-400: #020226;
+  --color-gray-100: #cacdd5;
+  --color-gray-200: #a3a6b4;
+  --color-gray-300: #70727e;
+  --color-gray-400: #1c1e23;
+  --color-gray-50: #f3f3f3;
+  --color-red-100: #f481a6;
+  --color-red-200: #fe417d;
+  --color-red-300: #ff1054;
+  --color-red-400: #8c0000;
+  /* numbers */
+  --spacing-xxsmall: 0.5rem;
+  --spacing-xsmall2: 0.75rem;
+  --spacing-xsmall-knap: 1.25rem;
+  --spacing-xsmall: 1.8125rem;
+  --spacing-small-knap: 2.5rem;
+  --spacing-small: 3.75rem;
+  --spacing-medium: 6rem;
+  --spacing-large: 8.125rem;
+  --width-small: 20rem;
+  --width-medium: 34.0625rem;
+  --width-medium2: 38.75rem;
+  --width-large: 50rem;
+}
+
+@font-face {
+  font-family: "Campton-Bold";
+  src: url(../fonte/CamptonBold.otf);
+}
+
+@font-face {
+  font-family: "Campton-SemiBold";
+  src: url(../fonte/CamptonSemiBold.otf);
+}
+
+/* desk */
+@media (min-width: 700px) {
+  a {
+    font-size: 28px;
+  }
+}
+
+/* mobile */
+@media (max-width: 700px) {
+  a {
+    font-size: 22px;
+  }
+}
