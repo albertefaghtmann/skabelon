@@ -39,6 +39,17 @@
   --width-large: 50rem;
 }
 
+:root {
+  /* Mode 1 */
+  /* colors */
+  --color-background-body: var(--color-blue-300);
+  --color-bottom-background: var(--color-red-300);
+  --color-bottom-text: var(--color-gray-50);
+  /* numbers */
+  --xsmall3: 1.25rem;
+  --small2: 2.5rem;
+}
+
 @font-face {
   font-family: "Campton-Bold";
   src: url(../fonte/CamptonBold.otf);
