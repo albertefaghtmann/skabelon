@@ -8,14 +8,14 @@
   box-sizing: border-box;
 }
 
-:root {
-  /* Mode 1 */
+[data-theme="Mode 1"] {
   /* colors */
   --color-blue-100: #bebed6;
   --color-blue-200: #1f1f6d;
   --color-blue-300: #0c0c2c;
   --color-blue-400: #020226;
   --color-gray-100: #cacdd5;
+  --color-gray-20: #ffffff;
   --color-gray-200: #a3a6b4;
   --color-gray-300: #70727e;
   --color-gray-400: #1c1e23;
@@ -25,29 +25,39 @@
   --color-red-300: #ff1054;
   --color-red-400: #8c0000;
   /* numbers */
-  --spacing-xxsmall: 0.5rem;
-  --spacing-xsmall2: 0.75rem;
-  --spacing-xsmall-knap: 1.25rem;
-  --spacing-xsmall: 1.8125rem;
-  --spacing-small-knap: 2.5rem;
-  --spacing-small: 3.75rem;
-  --spacing-medium: 6rem;
-  --spacing-large: 8.125rem;
-  --width-small: 20rem;
-  --width-medium: 34.0625rem;
-  --width-medium2: 38.75rem;
-  --width-large: 50rem;
+  --spacing-xxxsmall: 0.5rem;
+  --spacing-xxsmall: 0.75rem;
+  --spacing-xsmall: 1.25rem;
+  --spacing-small: 1.8125rem;
+  --spacing-medium: 2.5rem;
+  --spacing-large: 3.75rem;
+  --spacing-xlarge: 6rem;
+  --spacing-xxlarge: 8.125rem;
 }
 
-:root {
-  /* Mode 1 */
+[data-theme="Mode 1"] {
   /* colors */
-  --color-background-body: var(--color-blue-300);
-  --color-bottom-background: var(--color-red-300);
-  --color-bottom-text: var(--color-gray-50);
+  --color-background-body-body: var(--color-blue-300);
+  --color-background-bokse-bokse: var(--color-red-300);
+  --color-background-footer-footer: var(--color-blue-400);
+  --color-background-primarybutton-default: var(--color-red-300);
+  --color-background-primarybutton-hover: var(--color-gray-20);
+  --color-logo-logo: var(--color-red-300);
+  --color-text-footer-footer: var(--color-gray-20);
+  --color-text-heading-heading: var(--color-gray-20);
+  --color-text-linkbutton-default: var(--color-gray-20);
+  --color-text-linkbutton-hover: var(--color-red-300);
+  --color-text-p-p: var(--color-blue-100);
+  --color-text-primarybutton-default: var(--color-gray-20);
+  --color-text-primarybutton-hover: var(--color-red-300);
+  --color-text-secondarybutton-default: var(--color-red-300);
+  --color-text-secondarybutton-hover: var(--color-gray-20);
   /* numbers */
-  --xsmall3: 1.25rem;
-  --small2: 2.5rem;
+  --spacing-gap-gap: var(--spacing-medium);
+  --spacing-horisontal-button: var(--spacing-xsmall);
+  --spacing-vertical-xsmall: var(--spacing-xsmall);
+  --spacing-vertical-large: var(--spacing-large);
+  --spacing-vertical-xxlarge: var(--spacing-xxlarge);
 }
 
 @font-face {
@@ -59,17 +69,81 @@
   font-family: "Campton-SemiBold";
   src: url(../fonte/CamptonSemiBold.otf);
 }
-
-/* desk */
+/* desktop */
 @media (min-width: 700px) {
+  /*a=buttontext*/
   a {
-    font-size: 28px;
+    font-size: 1.5rem;
+    font-family: "Campton-Bold";
+    line-height: 1.7rem;
+  }
+  h1 {
+    font-size: 3.75rem;
+    font-family: "Campton-Bold";
+    line-height: 4.3rem;
+    color: var(--color-text-heading-heading);
+  }
+  h2 {
+    font-size: 3.1rem;
+    font-family: "Campton-Semibold";
+    line-height: 3.2rem;
+    color: var(--color-text-heading-heading);
+  }
+  h3 {
+    font-size: 2rem;
+    font-family: "Campton-Semibold";
+    line-height: 2.3rem;
+    color: var(--color-text-heading-heading);
+  }
+  /*h4=largetext*/
+  h4 {
+    font-family: ;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color-text-heading-heading);
+  }
+
+  p {
+    font-family: ;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: var(--color-text-p-p);
   }
 }
 
 /* mobile */
 @media (max-width: 700px) {
+  /*a=smalltext*/
   a {
-    font-size: 22px;
+    font-size: 1rem;
+    font-family: "Campton-Bold";
+    line-height: 1.4rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-family: "Campton-Bold";
+    line-height: 2.9rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+    font-family: "Campton-Semibold";
+    line-height: 2.1rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-family: "Campton-Semibold";
+    line-height: 1.4rem;
+  }
+  /*h4=largetext*/
+  h4 {
+    font-family: ;
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+  p {
+    font-family: ;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
   }
 }
