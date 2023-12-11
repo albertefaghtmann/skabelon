@@ -122,7 +122,7 @@ body {
 }
 
 /* mobile */
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   /*a=smalltext*/
   a {
     font-size: 1rem;
@@ -147,13 +147,13 @@ body {
   }
   /*h4=largetext*/
   h4 {
-    font-family: ;
+    font-family: "Rubik";
     font-size: 1.1rem;
     line-height: 2rem;
   }
   p {
-    font-family: ;
-    font-size: 1.2rem;
+    font-family: "Rubik";
+    font-size: 1rem;
     line-height: 1.8rem;
   }
 }

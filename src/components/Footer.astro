@@ -145,7 +145,6 @@
 
   p {
     color: var(--color-text-footer-footer);
-    font-size: small;
   }
 
   .boks_1 {
@@ -184,5 +183,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: var(--spacing-space-medium);
+  }
+
+  @media (max-width: 600px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-bottom: var(--spacing-space-medium);
+    }
   }
 </style>
