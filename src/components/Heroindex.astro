@@ -6,7 +6,7 @@ import Header from "./Header.astro";
 <section>
   <Header />
   <div>
-    <img class="billede" src="/assets/images/herobillede_index.webp" alt="" />
+    <img class="billede" src="/assets/images/indexbillede.webp" alt="" />
     <div class="grid-container">
       <div class="tekst">
         <p>KAMPAGNE</p>
@@ -21,7 +21,7 @@ import Header from "./Header.astro";
 
 <style>
   .billede {
-    height: 50%;
+    height: 887px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,15 +30,17 @@ import Header from "./Header.astro";
   }
 
   .grid-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transform: translate(10%, -180%);
   }
 
   .tekst {
-    transform: translate(30%, -150%);
+    grid-column: 1;
+    grid-row: 1;
   }
   .form {
-    text-align: center;
-    transform: translate(30%, -150%);
+    grid-column: 2;
+    grid-row: 1;
   }
 </style>
