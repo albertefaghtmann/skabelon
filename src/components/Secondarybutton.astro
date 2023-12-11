@@ -1,10 +1,12 @@
 ---
-const { text } = Astro.props;
+const { href text } = Astro.props;
 ---
 
-<button class="secondarybutton">
-  <a>{text}</a>
-</button>
+<div class="secondarybutton">
+  <a href={href}>
+    <p>{text}</p>
+  </a>
+</div>
 
 <style>
   .secondarybutton {
