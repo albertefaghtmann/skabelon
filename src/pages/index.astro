@@ -4,6 +4,7 @@ import Heroindex from "../components/Heroindex.astro";
 import Faktaboksrund from "../components/Faktaboksrund.astro";
 import Footer from "../components/Footer.astro";
 import Secondarybutton from "../components/Secondarybutton.astro";
+import Primarybutton from "../components/Primarybutton.astro";
 ---
 
 <html lang="en">
@@ -16,23 +17,37 @@ import Secondarybutton from "../components/Secondarybutton.astro";
   </head>
   <body>
     <Heroindex />
-    <section class="section1">
-      <Faktaboksrund text="Sikre et loft over den globale plastikproduktion" />
-      <Faktaboksrund text="Sikre en bæredygtig produktion og cirkularitet" />
-      <Faktaboksrund text="Sikre en retfærdig grøn omstilling, der mindsker ulighed mellem lande" />
-      <Faktaboksrund text="Er juridisk bindende for alle lande" />
+    <section>
+      <h2>Vi arbejder konkret for, at traktaten:</h2>
+      <div class="section1_faktaboks">
+        <Faktaboksrund text="Sikre et loft over den globale plastikproduktion" />
+        <Faktaboksrund text="Sikre en bæredygtig produktion og cirkularitet" />
+        <Faktaboksrund text="Sikre en retfærdig grøn omstilling, der mindsker ulighed mellem lande" />
+        <Faktaboksrund text="Er juridisk bindende for alle lande" />
+      </div>
     </section>
-    <Secondarybutton text="det virker sku" />
+    <section>
+      <h3>Plastik produktionen har en firedobbelt stigning de næste 20-30 år. Det betyder at der vil være en tredobling af plastikforurening i 2050.</h3>
+    </section>
+    <Secondarybutton text="Læs mere" />
+    <Primarybutton text="Skriv under" />
     <Footer />
 
     <style>
-      .section1 {
+      .section1_faktaboks {
         display: flex;
         gap: var(--spacing-gap-gap);
         justify-content: center;
         flex-wrap: wrap;
         padding-top: var(--spacing-vertical-large);
         padding-bottom: var(--spacing-vertical-xxlarge);
+      }
+      h2 {
+        text-align: center;
+      }
+      h3 {
+        max-width: 58%;
+        padding-bottom: var(--spacing-vertical-large);
       }
     </style>
   </body>
