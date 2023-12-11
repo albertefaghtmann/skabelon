@@ -6,8 +6,8 @@ import Header from "./Header.astro";
 <section>
   <Header />
   <div>
-    <img class="billede" src="/assets/images/herobillede_index.webp" alt="" />
     <div class="grid-container">
+      <img class="billede" src="/assets/images/herobillede_index.webp" alt="" />
       <div class="tekst">
         <p>KAMPAGNE</p>
         <h2>Skriv under og vær med i kampen for en global plastiktraktat</h2>
@@ -30,15 +30,16 @@ import Header from "./Header.astro";
   }
 
   .grid-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .tekst {
-    transform: translate(30%, -150%);
+    grid-column: 1;
+    grid-row: 1;
   }
   .form {
-    text-align: center;
-    transform: translate(30%, -150%);
+    grid-column: 2;
+    grid-row: 1;
   }
 </style>
