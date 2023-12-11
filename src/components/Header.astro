@@ -1,48 +1,50 @@
 ---
-import Primarybutton from "./Primarybutton.astro";
+import Secondarybutton from "./Secondarybutton.astro";
 import SecondaryButton from "./Secondarybutton.astro";
 ---
 
-<header>
-  <div id="mainmenu">
-    <slot name="header-slot" />
-    <div class="logo">
-      <a href="/"> <img class="logo_img" src="/assets/images/logo.png" alt="" /></a>
-    </div>
-
-    <button id="burger-menu">
-      Menu
-      <span></span>
-    </button>
-
-    <nav id="menu">
-      <ul>
-        <li><Primarybutton text="Skriv under" /></li>
-        <li><SecondaryButton text="Læs mere" /></li>
-        <li><SecondaryButton text="Om os" /></li>
-      </ul>
-    </nav>
+<div id="mainmenu">
+  <div class="logo">
+    <a href="/"> <img class="logo_img" src="/assets/images/logo.png" alt="plastic change logo" /></a>
   </div>
-</header>
+
+  <div id="burger-menu">
+    <span></span>
+  </div>
+  <nav id="menu">
+    <a href="/">Læs mere</a>
+    <a href="/">om os</a>
+    <Secondarybutton text="støt nu" />
+  </nav>
+</div>
 
 <script src="../scripts/burger.js"></script>
 
 <style>
-  header {
-    padding: 10px var(--color-button-spacingvertical, 29px);
+  #mainmenu {
+    display: flex;
     justify-content: space-between;
   }
 
-  li {
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  #menu {
-    float: right;
-  }
   .logo_img {
-    width: 200px;
+    width: 20%;
+  }
+
+  #menu {
+    display: flex;
+    text-wrap: nowrap;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var(--spacing-gap-gap);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-text-linkbutton-default);
+  }
+
+  a:hover {
+    color: var(--color-text-linkbutton-hover);
   }
 
   @media (max-width: 600px) {
@@ -151,7 +153,7 @@ import SecondaryButton from "./Secondarybutton.astro";
       opacity: 1;
     }
 
-    #menu li {
+    #menu a {
       list-style: none;
       display: initial;
     }
