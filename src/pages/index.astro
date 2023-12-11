@@ -29,6 +29,12 @@ import Primarybutton from "../components/Primarybutton.astro";
     <section class="container1">
       <h3>Plastik produktionen har en firedobbelt stigning de næste 20-30 år. Det betyder at der vil være en tredobling af plastikforurening i 2050.</h3>
     </section>
+    <div class="gridcontainer">
+      <h3>2020</h3>
+      <h3>2050</h3>
+      <img class="lidtflasker" src="/assets/images/lidtflasker.png" alt="" />
+      <img class="mangeflasker" src="/assets/images/mangeflasker.png" alt="" />
+    </div>
     <Secondarybutton text="Læs mere" />
     <Primarybutton text="Skriv under" />
     <Footer />
@@ -55,6 +61,13 @@ import Primarybutton from "../components/Primarybutton.astro";
 
   .container1 {
     display: flex;
+    justify-content: center;
+  }
+
+  .gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     justify-content: center;
   }
 </style>
