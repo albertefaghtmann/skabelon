@@ -22,7 +22,6 @@ import Header from "./Header.astro";
     height: 887px;
   }
   .billede {
-    height: 887px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,19 +31,16 @@ import Header from "./Header.astro";
 
   .grid-container {
     display: grid;
-    width: 80%;
+    gap: var(--spacing-xxlarge);
+    width: 100%;
     grid-template-columns: 1fr 1fr;
     transform: translate(10%, -180%);
   }
 
   .tekst {
-    width: 100%;
-    grid-column: 1;
-    grid-row: 1;
-    align-self: center;
+    justify-self: center;
   }
   .form {
-    grid-column: 2;
-    grid-row: 1;
+    justify-items: center;
   }
 </style>
