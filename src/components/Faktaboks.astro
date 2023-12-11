@@ -1,0 +1,46 @@
+---
+const { img, href, text } = Astro.props;
+---
+
+<div class="faktaboks">
+  <img src={img} />
+  <a href={href}>
+    <p>{text}</p>
+  </a>
+</div>
+
+<style>
+  .faktaboks {
+    position: relative;
+    text-align: center;
+    height: 462px;
+    width: 300px;
+    justify-content: space-between;
+    place-self: center;
+    text-align: center;
+  }
+  .faktaboks img {
+    opacity: 40%;
+    height: 100%;
+    width: 100%;
+  }
+
+  .faktaboks:hover img {
+    opacity: 100%;
+  }
+
+  /*p=buttontext*/
+  p {
+    position: absolute;
+    top: 45%;
+    font-size: 1.5rem;
+    font-family: "Campton-Bold";
+    line-height: 1.7rem;
+    place-items: center;
+    text-align: center;
+    color: var(--color-text-heading-heading);
+  }
+  .faktaboks:hover p {
+    display: none;
+  }
+</style>

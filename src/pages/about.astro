@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+import Faktaboks from "../components/Faktaboks.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&family=Montserrat+Alternates&family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+    <title>about</title>
+  </head>
+  <body>
+    <h1>Astro</h1>
+    <section class="faktaboks">
+      <Faktaboks img="/assets/images/billede_faktaboks1.webp" alt="demonstrationskilt" text="Vi arbejder for politisk og grøn lovgivning" href="https://plasticchange.dk/politisk-arbejde/" />
+      <Faktaboks img="/assets/images/billede_faktaboks2.webp" alt="" text="Vi samarbejder med virksomheder om en bæredygtig fremtid " />
+      <Faktaboks img="/assets/images/billede_faktaboks3.webp" alt="" text="Vi afholder events og workshops for at indrage folk i vores arbejde" />
+      <Faktaboks img="/assets/images/billede_faktaboks4.webp" alt="" text="Vi underviser for at vise vejen for den kommende generation" />
+    </section>
+  </body>
+</html>
+
+<style>
+  .faktaboks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xsmall);
+    justify-content: center;
+  }
+</style>
