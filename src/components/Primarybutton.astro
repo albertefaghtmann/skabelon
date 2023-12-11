@@ -2,18 +2,17 @@
 const { text } = Astro.props;
 ---
 
-<primarybutton>
+<button>
   <a>{text}</a>
-</primarybutton>
+</button>
 
 <style>
-  primarybutton {
-    padding: var(--spacing-xsmall-knap) var(--spacing-small-knap);
+  button {
+    padding: var(--spacing-horisontal-button) var(--spacing-medium);
     border: none;
-    border-radius: var(--spacing-space-xsmall);
-    background: var(--color-red-300);
+    border-radius: var(--spacing-small);
+    background: var(--color-background-primarybutton-default);
     text-align: center;
-    border-radius: var(--spacing-xsmall);
   }
   a {
     color: var(--color-gray-50);

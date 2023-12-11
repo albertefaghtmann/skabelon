@@ -1,5 +1,4 @@
 ---
-const { text } = Astro.props;
 import Primarybutton from "./Primarybutton.astro";
 ---
 
@@ -7,9 +6,8 @@ import Primarybutton from "./Primarybutton.astro";
   <h3>Gør en forskel</h3>
   <h2>16.468</h2>
   <p>har allerede skrevet under!</p>
-  <div class="form-button">
-    <Primarybutton text="Skriv under" />
-  </div>
+  <img src="/assets/form_linje.svg" alt="" />
+  <Primarybutton text="Skriv under" />
 </section>
 
 <style>
@@ -21,8 +19,7 @@ import Primarybutton from "./Primarybutton.astro";
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--color-gray-300);
   }
 </style>

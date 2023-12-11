@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-[data-theme="Mode 1"] {
+:root {
   /* colors */
   --color-blue-100: #bebed6;
   --color-blue-200: #1f1f6d;
@@ -35,7 +35,7 @@
   --spacing-xxlarge: 8.125rem;
 }
 
-[data-theme="Mode 1"] {
+:root {
   /* colors */
   --color-background-body-body: var(--color-blue-300);
   --color-background-bokse-bokse: var(--color-red-300);
