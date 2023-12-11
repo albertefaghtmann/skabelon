@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
 import Faktaboks from "../components/Faktaboks.astro";
+import Primarybutton from "../components/Primarybutton.astro";
+import Secondarybutton from "../components/Secondarybutton.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -15,21 +18,47 @@ import Faktaboks from "../components/Faktaboks.astro";
     <title>about</title>
   </head>
   <body>
-    <h1>Astro</h1>
-    <section class="faktaboks">
-      <Faktaboks img="/assets/images/billede_faktaboks1.webp" alt="demonstrationskilt" text="Vi arbejder for politisk og grøn lovgivning" href="https://plasticchange.dk/politisk-arbejde/" />
-      <Faktaboks img="/assets/images/billede_faktaboks2.webp" alt="" text="Vi samarbejder med virksomheder om en bæredygtig fremtid " />
-      <Faktaboks img="/assets/images/billede_faktaboks3.webp" alt="" text="Vi afholder events og workshops for at indrage folk i vores arbejde" />
-      <Faktaboks img="/assets/images/billede_faktaboks4.webp" alt="" text="Vi underviser for at vise vejen for den kommende generation" />
+    <section class="section1">
+      <h2>Hvem er vi?</h2>
+      <p>Plastic Change er en dansk miljøorganisation, der arbejder både i Danmark og internationalt på at gøre opmærksom på konsekvenserne af de voksende mængder plastik i havene og miljøet.</p>
+      <p>Plastic Change blev stiftet i foråret 2014 af miljøbiolog og miljøforkæmper Henrik Beha Pedersen, der i dag er bestyrelsesformand.</p>
+      <p>Vi arbejder for at knække den stigende kurve for plastikforurening og plastikproduktion. Derfor fokuserer vi på, at vi skal reducere vores forbrug af især engangsplastik og anvende plastik smartere.</p>
     </section>
+    <section class="section2">
+      <h2>Hvordan arbejder vi?</h2>
+      <div class="faktaboks">
+        <Faktaboks img="/assets/images/billede_faktaboks1.webp" alt="demonstrationskilt" text="Vi arbejder for politisk og grøn lovgivning" href="https://plasticchange.dk/politisk-arbejde/" />
+        <Faktaboks img="/assets/images/billede_faktaboks2.webp" alt="" text="Vi samarbejder med virksomheder om en bæredygtig fremtid " />
+        <Faktaboks img="/assets/images/billede_faktaboks3.webp" alt="" text="Vi afholder events og workshops for at indrage folk i vores arbejde" />
+        <Faktaboks img="/assets/images/billede_faktaboks4.webp" alt="" text="Vi underviser for at vise vejen for den kommende generation" />
+      </div>
+    </section>
+    <Secondarybutton text="Læs mere om os" />
+    <Primarybutton text="Skriv under" />
+    <Footer />
   </body>
 </html>
 
 <style>
+  p {
+    padding-top: var(--spacing-vertical-xsmall);
+    max-width: 60%;
+    margin: auto;
+  }
+
+  h2 {
+    padding-bottom: var(--spacing-vertical-large);
+  }
+  .section1 {
+    justify-content: center;
+    padding-block: var(--spacing-vertical-xxlarge);
+  }
+
   .faktaboks {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-xsmall);
     justify-content: center;
+    padding-bottom: var(--spacing-vertical-large);
   }
 </style>
