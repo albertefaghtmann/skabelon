@@ -1,10 +1,44 @@
 ---
-const { text } = Astro.props;
-import Primarybutton from "./Primarybutton.astro";
+import Form from "../components/Form.astro";
+import Header from "./Header.astro";
 ---
 
 <section>
-  <div class="hero-button">
-    <Primarybutton />
+  <Header />
+  <div>
+    <img class="billede" src="/assets/images/herobillede_index.webp" alt="" />
+    <div class="grid-container">
+      <div class="tekst">
+        <p>KAMPAGNE</p>
+        <h2>Skriv under og vær med i kampen for en global plastiktraktat</h2>
+      </div>
+      <div class="form">
+        <Form />
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  .billede {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: flex;
+    width: 100%;
+  }
+
+  .grid-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tekst {
+    transform: translate(30%, -150%);
+  }
+  .form {
+    text-align: center;
+    transform: translate(30%, -150%);
+  }
+</style>
