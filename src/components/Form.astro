@@ -1,0 +1,28 @@
+---
+const { text } = Astro.props;
+import Primarybutton from "./Primarybutton.astro";
+---
+
+<section class="form">
+  <h3>Gør en forskel</h3>
+  <h2>16.468</h2>
+  <p>har allerede skrevet under!</p>
+  <div class="form-button">
+    <Primarybutton text="Skriv under" />
+  </div>
+</section>
+
+<style>
+  .form {
+    display: flex;
+    width: 370px;
+    height: 430px;
+    padding: var(--spacing-medium, 40px) 0px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+</style>
