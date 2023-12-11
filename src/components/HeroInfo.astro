@@ -1,0 +1,32 @@
+---
+import Header from "./Header.astro";
+import Primarybutton from "./Primarybutton.astro";
+---
+
+<Header />
+
+<div class="hero-image">
+  <img class="billede" src="/assets/images/infohero.webp" alt="" />
+  <div class="hero-text">
+    <p>KAMPAGNE</p>
+    <h1>Om plastikforurening og den globale plastiktraktat</h1>
+    <Primarybutton text="Skriv under" />
+  </div>
+</div>
+
+<style>
+  .billede {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 50%;
+  }
+
+  .hero-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 50%;
+    transform: translate(10%, -150%);
+  }
+</style>
