@@ -3,23 +3,24 @@ import Form from "../components/Form.astro";
 import Header from "./Header.astro";
 ---
 
-<section>
-  <Header />
-  <div>
-    <img class="billede" src="/assets/images/indexbillede.webp" alt="" />
-    <div class="grid-container">
-      <div class="tekst">
-        <p>KAMPAGNE</p>
-        <h2>Skriv under og vær med i kampen for en global plastiktraktat</h2>
-      </div>
-      <div class="form">
-        <Form />
-      </div>
+<Header />
+<div class="herounit">
+  <img class="billede" src="/assets/images/indexbillede.webp" alt="" />
+  <div class="grid-container">
+    <div class="tekst">
+      <p>KAMPAGNE</p>
+      <h2>Skriv under og vær med i kampen for en global plastiktraktat</h2>
+    </div>
+    <div class="form">
+      <Form />
     </div>
   </div>
-</section>
+</div>
 
 <style>
+  .herounit {
+    height: 887px;
+  }
   .billede {
     height: 887px;
     background-position: center;
@@ -31,13 +32,16 @@ import Header from "./Header.astro";
 
   .grid-container {
     display: grid;
+    width: 80%;
     grid-template-columns: 1fr 1fr;
     transform: translate(10%, -180%);
   }
 
   .tekst {
+    width: 100%;
     grid-column: 1;
     grid-row: 1;
+    align-self: center;
   }
   .form {
     grid-column: 2;
