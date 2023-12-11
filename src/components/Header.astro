@@ -24,9 +24,10 @@ import SecondaryButton from "./Secondarybutton.astro";
   #mainmenu {
     display: flex;
     justify-content: space-between;
+    padding: var(--spacing-xxsmall);
   }
 
-  .logo_img {
+  .logo img {
     width: 20%;
   }
 
@@ -49,8 +50,19 @@ import SecondaryButton from "./Secondarybutton.astro";
 
   @media (max-width: 600px) {
     .logo {
-      width: 12%;
+      width: 100%;
       z-index: 3;
+    }
+
+    .logo img {
+      width: 1000%;
+    }
+    #menu {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: var(--spacing-gap-gap);
     }
 
     #mainmenu {
@@ -66,22 +78,11 @@ import SecondaryButton from "./Secondarybutton.astro";
       z-index: 3;
     }
     #burger-menu {
-      text-indent: -9999px;
-      display: none;
       border: none;
-      background: transparent;
-      margin: 25px;
       cursor: pointer;
-      height: 28px;
-      width: 28px;
-      position: relative;
       z-index: 2;
     }
-    #burger-menu {
-      display: block;
-      position: absolute;
-      right: 25px;
-    }
+
     #burger-menu span,
     #burger-menu span:before,
     #burger-menu span:after {

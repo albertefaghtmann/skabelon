@@ -2,24 +2,29 @@
 const { text } = Astro.props;
 ---
 
-<button>
+<button class="secondarybutton">
   <a>{text}</a>
 </button>
 
 <style>
-  button {
+  .secondarybutton {
     display: inline-flex;
     padding: var(--spacing-horisontal-button) var(--spacing-medium);
     justify-content: center;
     align-items: center;
-    background-color: none;
+    background: none;
     border-radius: var(--spacing-small);
-    border: 3px solid var(--color-gray-50, #f3f3f3);
+    border: 3px solid var(--color-gray-50);
   }
-  button :hover {
+  .secondarybutton :hover {
+    background-color: var(--color-background-primarybutton-default);
+    border: none;
   }
+
   a {
-    color: var(--color-gray-50);
-    font-family: "Campton-Bold";
+    color: var(--color-text-secondarybutton-hover);
+  }
+  a:hover {
+    color: var(--color-text-secondarybutton-default);
   }
 </style>
