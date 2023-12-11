@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Hero from "../components/Hero.astro";
+import Faktaboksrund from "../components/Faktaboksrund.astro";
 ---
 
 <html lang="en">
@@ -15,5 +16,20 @@ import Hero from "../components/Hero.astro";
     <h1>Astro</h1>
     <p>hej med dig</p>
     <Hero />
+    <section class="section1">
+      <Faktaboksrund text="Sikre et loft over den globale plastikproduktion" />
+      <Faktaboksrund text="Sikre en bæredygtig produktion og cirkularitet" />
+      <Faktaboksrund text="Sikre en retfærdig grøn omstilling, der mindsker ulighed mellem lande" />
+      <Faktaboksrund text="Er juridisk bindende for alle lande" />
+    </section>
   </body>
 </html>
+
+<style>
+  .section1 {
+    display: flex;
+    gap: var(--spacing-gap-gap);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

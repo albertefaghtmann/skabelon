@@ -1,0 +1,28 @@
+---
+const { text } = Astro.props;
+---
+
+<div class="faktaboks_rund">
+  <p>{text}</p>
+</div>
+
+<style>
+  .faktaboks_rund {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: var(--color-background-bokse-bokse);
+  }
+
+  /*button text small*/
+  p {
+    color: var(--color-text-heading-heading);
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Campton-Bold";
+    line-height: 1.4rem;
+  }
+</style>
