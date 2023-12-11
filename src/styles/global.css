@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--color-background-body-body);
+}
+
 :root {
   /* colors */
   --color-blue-100: #bebed6;

@@ -1,0 +1,159 @@
+---
+import Primarybutton from "./Primarybutton.astro";
+import SecondaryButton from "./Secondarybutton.astro";
+---
+
+<header>
+  <div id="mainmenu">
+    <slot name="header-slot" />
+    <div class="logo">
+      <a href="/"> <img class="logo_img" src="/assets/images/logo.png" alt="" /></a>
+    </div>
+
+    <button id="burger-menu">
+      Menu
+      <span></span>
+    </button>
+
+    <nav id="menu">
+      <ul>
+        <li><Primarybutton text="Skriv under" /></li>
+        <li><SecondaryButton text="Læs mere" /></li>
+        <li><SecondaryButton text="Om os" /></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script src="../scripts/burger.js"></script>
+
+<style>
+  header {
+    padding: 10px var(--color-button-spacingvertical, 29px);
+    justify-content: space-between;
+  }
+
+  li {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  #menu {
+    float: right;
+  }
+  .logo_img {
+    width: 200px;
+  }
+
+  @media (max-width: 600px) {
+    .logo {
+      width: 12%;
+      z-index: 3;
+    }
+
+    #mainmenu {
+      display: grid;
+    }
+    #mainmenu > * {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .logo {
+      width: 5%;
+      padding: 7px;
+      z-index: 3;
+    }
+    #burger-menu {
+      text-indent: -9999px;
+      display: none;
+      border: none;
+      background: transparent;
+      margin: 25px;
+      cursor: pointer;
+      height: 28px;
+      width: 28px;
+      position: relative;
+      z-index: 2;
+    }
+    #burger-menu {
+      display: block;
+      position: absolute;
+      right: 25px;
+    }
+    #burger-menu span,
+    #burger-menu span:before,
+    #burger-menu span:after {
+      background: var(--color-red-300);
+      display: block;
+      height: 4px;
+      opacity: 1;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+      content: "";
+    }
+    #burger-menu span:before {
+      left: 0px;
+      top: -10px;
+      width: 55px;
+    }
+    #burger-menu span {
+      right: 0px;
+      top: 13px;
+      width: 55px;
+    }
+    #burger-menu span:after {
+      left: 0px;
+      top: 10px;
+      width: 55px;
+    }
+    #burger-menu.close span:before {
+      top: 0px;
+      transform: rotate(65deg);
+      width: 65px;
+      background: var(--color-red-300);
+    }
+    #burger-menu.close span {
+      transform: rotate(-32deg);
+      top: 13px;
+      width: 65px;
+      background: var(--color-red-300);
+    }
+    #burger-menu.close span:after {
+      top: 0px;
+      left: 0;
+      transform: rotate(65deg);
+      opacity: 0;
+      width: 0;
+      background: var(--color-red-300);
+    }
+    #menu {
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      position: fixed;
+      top: 0;
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+      text-align: left;
+      padding-top: 20px;
+      padding-left: 100px;
+      transition: all 0.3s ease-in-out;
+    }
+    #menu.overlay {
+      visibility: visible;
+      opacity: 1;
+      padding-top: 100px;
+      background: var(--color-background-body-body);
+    }
+    .logo.overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #menu li {
+      list-style: none;
+      display: initial;
+    }
+  }
+</style>

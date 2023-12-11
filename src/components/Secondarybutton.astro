@@ -1,0 +1,25 @@
+---
+const { text } = Astro.props;
+---
+
+<button>
+  <a>{text}</a>
+</button>
+
+<style>
+  button {
+    display: inline-flex;
+    padding: var(--spacing-horisontal-button) var(--spacing-medium);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    border-radius: var(--spacing-small);
+    border: 3px solid var(--color-gray-50, #f3f3f3);
+  }
+  button :hover {
+  }
+  a {
+    color: var(--color-gray-50);
+    font-family: "Campton-Bold";
+  }
+</style>
