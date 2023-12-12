@@ -29,17 +29,20 @@ import Primarybutton from "../components/Primarybutton.astro";
     <section class="container1">
       <h3>Plastik produktionen har en firedobbelt stigning de næste 20-30 år. Det betyder at der vil være en tredobling af plastikforurening i 2050.</h3>
     </section>
-    <div class="gridcontainer">
-      <h3>2020</h3>
-      <h3>2050</h3>
-      <img class="lidtflasker" src="/assets/images/lidtflasker.png" alt="" />
-      <img class="mangeflasker" src="/assets/images/mangeflasker.png" alt="" />
+    <div class="center-wrapper">
+      <div class="gridcontainer">
+        <h3 class="overskrift1">2020</h3>
+        <h3 class="overskrift2">2050</h3>
+        <img class="lidtflasker" src="/assets/images/lidtflasker.png" alt="" />
+        <img class="mangeflasker" src="/assets/images/mangeflasker.png" alt="" />
+      </div>
     </div>
-    <section class="container2">
-      <Secondarybutton text="Læs mere" />
-      <Primarybutton text="Skriv under" />
-    </section>
-
+    <div class="center-wrapper">
+      <section class="container2">
+        <Secondarybutton text="Læs mere" />
+        <Primarybutton text="Skriv under" />
+      </section>
+    </div>
     <Footer />
   </body>
 </html>
@@ -72,6 +75,16 @@ import Primarybutton from "../components/Primarybutton.astro";
   .gridcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .overskrift1,
+  .overskrift2 {
+    text-align: center;
+    color: var(--color-red-300);
+  }
+
+  .center-wrapper {
+    display: flex;
     align-items: center;
     justify-content: center;
   }

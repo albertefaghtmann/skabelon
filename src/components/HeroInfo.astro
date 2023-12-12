@@ -15,6 +15,7 @@ import Primarybutton from "./Primarybutton.astro";
 </div>
 
 <style>
+  /*
   .billede {
     background-position: center;
     background-repeat: no-repeat;
@@ -28,5 +29,31 @@ import Primarybutton from "./Primarybutton.astro";
     grid-template-columns: 1fr;
     width: 50%;
     transform: translate(10%, -150%);
+  }*/
+
+  .hero-image {
+    position: relative;
+    overflow: hidden; /* For at sikre, at .hero-text ikke overskrider billedet */
+  }
+
+  .billede {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+    width: 50%;
+    z-index: 1;
+  }
+
+  .Primarybutton {
+    display: block;
+    margin-top: 10px;
   }
 </style>

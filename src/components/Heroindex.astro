@@ -18,6 +18,7 @@ import Header from "./Header.astro";
 </div>
 
 <style>
+  /*
   .herounit {
     height: 887px;
   }
@@ -28,7 +29,6 @@ import Header from "./Header.astro";
     position: flex;
     width: 100%;
   }
-
   .grid-container {
     display: grid;
     gap: var(--spacing-xxlarge);
@@ -36,11 +36,44 @@ import Header from "./Header.astro";
     grid-template-columns: 1fr 1fr;
     transform: translate(10%, -150%);
   }
-
   .tekst {
     justify-self: center;
   }
   .form {
     justify-items: center;
+  }*/
+
+  .herounit {
+    position: relative;
+  }
+
+  .grid-container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Juster bredden efter behov */
+    padding: 15px; /* Tilføj et ekstra mellemrum inden for containeren */
+    text-align: center; /* Centerjuster tekst inden for containeren */
+  }
+
+  .tekst {
+    flex: 1; /* Gør .tekst flexibel, så den tager op så meget plads som muligt */
+    text-align: left; /* Venstrejuster tekst inden for .tekst */
+    margin-right: var(--spacing-xxlarge); /* Tilføj et mellemrum til højre af .tekst */
+  }
+
+  .tekst p {
+    margin: 0;
+  }
+
+  .form {
+    flex: 1; /* Gør .form flexibel, så den tager op så meget plads som muligt */
+  }
+
+  .billede {
+    width: 100%; /* Sørg for, at billedet fylder hele bredden af .herounit */
+    height: auto;
   }
 </style>
