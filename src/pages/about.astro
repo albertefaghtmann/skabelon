@@ -4,6 +4,7 @@ import Faktaboks from "../components/Faktaboks.astro";
 import Primarybutton from "../components/Primarybutton.astro";
 import Secondarybutton from "../components/Secondarybutton.astro";
 import Footer from "../components/Footer.astro";
+import Heroabout from "../components/Heroabout.astro";
 ---
 
 <html lang="en">
@@ -18,6 +19,7 @@ import Footer from "../components/Footer.astro";
     <title>about</title>
   </head>
   <body>
+    <Heroabout />
     <section class="section1">
       <h2>Hvem er vi?</h2>
       <p>Plastic Change er en dansk miljøorganisation, der arbejder både i Danmark og internationalt på at gøre opmærksom på konsekvenserne af de voksende mængder plastik i havene og miljøet.</p>
@@ -33,8 +35,12 @@ import Footer from "../components/Footer.astro";
         <Faktaboks img="/assets/images/billede_faktaboks4.webp" alt="" text="Vi underviser for at vise vejen for den kommende generation" />
       </div>
     </section>
-    <Secondarybutton text="Læs mere om os" />
-    <Primarybutton text="Skriv under" />
+    <div class="center-wrapper">
+      <section class="container2">
+        <Secondarybutton text="Læs mere" />
+        <Primarybutton text="Skriv under" />
+      </section>
+    </div>
     <Footer />
   </body>
 </html>
@@ -48,17 +54,25 @@ import Footer from "../components/Footer.astro";
 
   h2 {
     padding-bottom: var(--spacing-vertical-large);
+    text-align: center;
   }
   .section1 {
     justify-content: center;
     padding-block: var(--spacing-vertical-xxlarge);
   }
-
   .faktaboks {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-xsmall);
     justify-content: center;
     padding-bottom: var(--spacing-vertical-large);
+  }
+  .center-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container2 {
+    text-align: center;
   }
 </style>
