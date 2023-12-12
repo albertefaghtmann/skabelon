@@ -8,7 +8,8 @@ const { href, text } = Astro.props;
 
 <style>
   .primarybutton {
-    padding: var(--spacing-horisontal-button) var(--spacing-medium);
+    padding-block: var(--spacing-horisontal-button);
+    width: 18.75rem;
     border: none;
     justify-content: center;
     align-items: center;
@@ -16,6 +17,7 @@ const { href, text } = Astro.props;
     background-color: var(--color-background-primarybutton-default);
     display: block;
     margin-top: var(--spacing-vertical-xsmall);
+    border: 3px solid var(----color-red-300);
   }
 
   .primarybutton a {

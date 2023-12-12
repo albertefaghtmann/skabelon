@@ -2,15 +2,14 @@
 const { href, text } = Astro.props;
 ---
 
-<button class="secondarybutton">
+<button class="headingbutton">
   <a href={href}>{text}</a>
 </button>
 
 <style>
-  .secondarybutton {
+  .headingbutton {
     display: inline-flex;
-    padding-block: var(--spacing-horisontal-button);
-    width: 18.75rem;
+    padding: var(--spacing-horisontal-button) var(--spacing-medium);
     justify-content: center;
     align-items: center;
     background-color: transparent;
@@ -18,15 +17,15 @@ const { href, text } = Astro.props;
     border: 3px solid var(--color-gray-50);
   }
 
-  .secondarybutton a {
+  .headingbutton a {
     text-decoration: none;
     color: var(--color-text-secondarybutton-hover);
   }
-  .secondarybutton:hover {
+  .headingbutton:hover {
     background-color: var(--color-gray-20);
   }
 
-  .secondarybutton:hover a {
+  .headingbutton:hover a {
     color: var(--color-text-primarybutton-hover);
   }
 </style>
