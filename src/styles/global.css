@@ -134,26 +134,31 @@ body {
     font-size: 2.5rem;
     font-family: "Campton-Bold";
     line-height: 2.9rem;
+    color: var(--color-text-heading-heading);
   }
   h2 {
     font-size: 1.8rem;
     font-family: "Campton-Semibold";
     line-height: 2.1rem;
+    color: var(--color-text-heading-heading);
   }
   h3 {
     font-size: 1.5rem;
     font-family: "Campton-Semibold";
     line-height: 1.4rem;
+    color: var(--color-text-heading-heading);
   }
   /*h4=largetext*/
   h4 {
     font-family: "Rubik";
     font-size: 1.1rem;
     line-height: 2rem;
+    color: var(--color-text-heading-heading);
   }
   p {
     font-family: "Rubik";
     font-size: 1rem;
     line-height: 1.8rem;
+    color: var(--color-text-p-p);
   }
 }
