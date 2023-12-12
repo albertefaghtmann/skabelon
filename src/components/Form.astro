@@ -4,8 +4,10 @@ import Primarybutton from "./Primarybutton.astro";
 
 <section class="form">
   <h3>Gør en forskel og <br />skriv under!</h3>
-  <h2>16.468</h2>
-  <p>har allerede skrevet under!</p>
+  <div class="grouptext">
+    <h2>16.468</h2>
+    <p>har allerede skrevet under!</p>
+  </div>
   <img src="/assets/images/form_linje.svg" alt="" />
   <Primarybutton href="/" text="Skriv under" />
 </section>
@@ -24,5 +26,20 @@ import Primarybutton from "./Primarybutton.astro";
     align-items: center;
     border-radius: 30px;
     background: var(--color-background-form);
+  }
+
+  h2 {
+    font-size: 4.375rem;
+    font-family: "Campton-bold";
+  }
+
+  p {
+    font-family: "Rubik";
+    font-size: 13px;
+  }
+
+  .grouptext {
+    padding-block: 0;
+    margin: 0;
   }
 </style>
