@@ -11,18 +11,18 @@ import Primarybutton from "./Primarybutton.astro";
     </div>
     <div class="mail_input">
       <label for="mail"><br />Mail<br /></label>
-      <input id="mail" type="text" name="mail" />
+      <input type="text" id="mail" name="mail" placeholder="eksempel@mail.nu" />
     </div>
   </div>
-
-  <label class="checkboks"
-    >Accepter vilkår og <p class="underline">betingelser</p>*
+  <label class="checkboks">
     <input type="checkbox" checked="checked" />
+    Accepter vilkår og <p class="underline">betingelser</p>*
     <span class="checkmark"></span>
   </label>
-  <label class="checkboks"
-    >Modtag Plastic Changes nyhedsbrev
+
+  <label class="checkboks">
     <input type="checkbox" />
+    Modtag Plastic Changes nyhedsbrev
     <span class="checkmark"></span>
   </label>
 
@@ -68,11 +68,6 @@ import Primarybutton from "./Primarybutton.astro";
   }
 
   /*checkbox */
-  .checkboks {
-    color: var(--color-gray-20);
-    font-family: "Rubik";
-    font-size: 10px;
-  }
 
   .underline {
     color: var(--color-red-300);
@@ -80,5 +75,46 @@ import Primarybutton from "./Primarybutton.astro";
     font-family: "Rubik";
     text-decoration: underline;
     font-size: 10px;
+  }
+
+  .checkboks {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    display: block;
+    user-select: none;
+    color: var(--color-gray-20);
+    font-family: "Rubik";
+    font-size: 10px;
+    margin-right: 100px;
+  }
+
+  .checkboks input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border-radius: 15px;
+    border: 1px solid var(--color-gray-20);
+  }
+
+  .checkboks:hover input ~ .checkmark {
+    background-color: var(--color-gray-20);
+  }
+
+  .checkboks input:checked ~ .checkmark {
+    background: var(--color-red-300);
+  }
+
+  .checkboks input:checked ~ .checkmark:after {
+    display: block;
   }
 </style>

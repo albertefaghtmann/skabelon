@@ -1,11 +1,13 @@
 ---
 import Primarybutton from "./Primarybutton.astro";
-import Secondarybutton from "./Headingbutton.astro";
+import Secondarybutton from "./Secondarybutton.astro";
 ---
 
 <section class="form">
-  <h3>Tak fordi du er med til at gøre en forskel!</h3>
-  <p>Vi har sendt en mail for at bekfræfte din underskrift</p>
+  <div class="grouptext">
+    <h3>Tak fordi du er med til at gøre en forskel!</h3>
+    <p>Vi har sendt en mail for at bekfræfte din underskrift</p>
+  </div>
   <div class="buttons">
     <Secondarybutton text="Læs mere her" />
     <Primarybutton text="Støt nu" />
@@ -25,8 +27,15 @@ import Secondarybutton from "./Headingbutton.astro";
     background: var(--color-background-form);
   }
 
-  h3,
+  h3 {
+    max-width: 320px;
+  }
+
   p {
-    max-width: 290px;
+    max-width: 236px;
+    text-align: center;
+    font-family: "Rubik";
+    font-size: 15px;
+    line-height: normal;
   }
 </style>
