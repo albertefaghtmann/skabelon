@@ -22,7 +22,9 @@ import Footer from "../components/Footer.astro";
     <HeroInfo />
     <div class="center-wrapper">
       <section class="section1">
-        <h2>Vi er den eneste danske NGO, der kæmper for en global plastiktraktat</h2>
+        <div class="overskrift-center">
+          <h2>Vi er den eneste danske NGO, der kæmper for en global plastiktraktat</h2>
+        </div>
         <p>
           …men vi er heldigvis ikke alene om at kræve den mest ambitiøse traktat. Vi har mere end 2.700 organisationer fra hele verden i ryggen, og har allieret os med forskere og videnskabsfolk, der arbejder for et loft over plastikproduktionen.
         </p>
@@ -52,19 +54,27 @@ import Footer from "../components/Footer.astro";
         <Talboks text="3" text2="Genanvender vi 1 kg plastik, kommer der ca. 2,2 kg CO2  mindre ud i atmosfæren." />
       </div>
     </section>
-    <p>Næppe overraskende arbejder olie,- petrokemikalie,- og plastikindustrien imod sådan et loft. De siger, at det ikke er nødvendigt, og de mener, at vi kan genanvende os ud af problemerne med plastik.</p>
+    <div class="tekstboks">
+      <p>Næppe overraskende arbejder olie,- petrokemikalie,- og plastikindustrien imod sådan et loft. De siger, at det ikke er nødvendigt, og de mener, at vi kan genanvende os ud af problemerne med plastik.</p>
+    </div>
     <div class="center-wrapper">
       <h3>I 2050 er der med den nuværende udvikling forventligt mere plastik i havene end der er fisk.</h3>
     </div>
     <div class="center-wrapper">
       <img src="assets/images/fisk.png" alt="" />
     </div>
-    <p>
-      Det blev vedtaget, at traktaten skal dække hele plastikkens livscyklus, det vil sige ikke kun den plastik, der allerede er endt som forurening, men også al den nye plastik, der bliver produceret. Dette er helt afgørende for at stoppe
-      forureningen.
-    </p>
-    <p>Over de næste to år skal verdens lande mødes og blive enige om traktatens konkrete indhold, før den endelig skal udformes til UNEA 6.0 i 2024.</p>
-    <h3>Kampen er derfor langt fra slut – din underskrift får stor betydning</h3>
+    <div class="tesktsboks">
+      <p>
+        Det blev vedtaget, at traktaten skal dække hele plastikkens livscyklus, det vil sige ikke kun den plastik, der allerede er endt som forurening, men også al den nye plastik, der bliver produceret. Dette er helt afgørende for at stoppe
+        forureningen.
+      </p>
+    </div>
+    <div class="tesktsboks">
+      <p>Over de næste to år skal verdens lande mødes og blive enige om traktatens konkrete indhold, før den endelig skal udformes til UNEA 6.0 i 2024.</p>
+    </div>
+    <div class="sidsteboks">
+      <h3>Kampen er derfor langt fra slut – din underskrift får stor betydning</h3>
+    </div>
     <div class="center-wrapper">
       <section class="container3">
         <Secondarybutton href="/" text="Læs mere" />
@@ -89,7 +99,7 @@ import Footer from "../components/Footer.astro";
 
   h2 {
     padding-bottom: var(--spacing-vertical-large);
-    text-align: center;
+    padding-top: var(--spacing-vertical-xxlarge);
     max-width: 60%;
   }
 
@@ -98,6 +108,17 @@ import Footer from "../components/Footer.astro";
     text-align: center;
     max-width: 60%;
   }
+
+  .overskrift-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section1 p {
+    padding-bottom: var(--spacing-vertical-large);
+  }
+
   .center-wrapper {
     display: flex;
     align-items: center;
@@ -140,5 +161,17 @@ import Footer from "../components/Footer.astro";
   .talboks3 {
     bottom: 600px;
     right: -400px;
+  }
+
+  .tekstboks {
+    padding-top: var(--spacing-vertical-large);
+    padding-bottom: var(--spacing-vertical-xxlarge);
+  }
+
+  .sidsteboks {
+    padding-top: var(--spacing-vertical-large);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
