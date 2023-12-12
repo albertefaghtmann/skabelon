@@ -88,4 +88,24 @@ import Primarybutton from "../components/Primarybutton.astro";
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: 600px) {
+    .gridcontainer {
+      grid-template-columns: 1fr;
+    }
+
+    .mangeflasker,
+    .lidtflasker {
+      width: 50%;
+    }
+
+    .container1,
+    .container2 {
+      display: block; /* Skifter til blokdisplay på mindre skærme */
+    }
+
+    .center-wrapper {
+      text-align: center; /* Centerjuster indholdet i center-wrapper */
+    }
+  }
 </style>

@@ -51,4 +51,21 @@ import Header from "./Header.astro";
     width: 100%; /* Sørg for, at billedet fylder hele bredden af .herounit */
     height: auto;
   }
+
+  @media (max-width: 600px) {
+    .billede {
+      width: 150%; /* Sørg for, at billedet fylder hele bredden af .herounit */
+      height: auto;
+      display: block;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .tekst {
+      padding-top: var(--spacing-xxlarge);
+    }
+  }
 </style>
