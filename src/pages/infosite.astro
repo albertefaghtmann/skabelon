@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import HeroInfo from "../components/HeroInfo.astro";
+import Primarybutton from "../components/Primarybutton.astro";
 ---
 
 <html lang="en">
@@ -16,5 +17,54 @@ import HeroInfo from "../components/HeroInfo.astro";
   </head>
   <body>
     <HeroInfo />
+    <div class="center-wrapper">
+      <section class="section1">
+        <h2>Vi er den eneste danske NGO, der kæmper for en global plastiktraktat</h2>
+        <p>
+          …men vi er heldigvis ikke alene om at kræve den mest ambitiøse traktat. Vi har mere end 2.700 organisationer fra hele verden i ryggen, og har allieret os med forskere og videnskabsfolk, der arbejder for et loft over plastikproduktionen.
+        </p>
+      </section>
+    </div>
+    <div class="center-wrapper">
+      <Primarybutton text="Skriv under" />
+    </div>
+    <div class="center-wrapper">
+      <h2>Hvor ender plastemballagen?</h2>
+    </div>
+    <div class="center-wrapper">
+      <img class="diagram" src="/assets/images/diagram2.png" alt="" />
+    </div>
+    <div class="center-wrapper">
+      <h2>DU skal skrive under fordi:</h2>
+    </div>
+    <section></section>
   </body>
 </html>
+
+<style>
+  .pose1 {
+    width: 97.186px;
+    height: 125.778px;
+    flex-shrink: 0;
+  }
+  p {
+    padding-top: var(--spacing-vertical-xsmall);
+    max-width: 60%;
+    margin: auto;
+  }
+
+  h2 {
+    padding-bottom: var(--spacing-vertical-large);
+    text-align: center;
+    max-width: 60%;
+  }
+  .center-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .diagram {
+    width: 40%;
+  }
+</style>

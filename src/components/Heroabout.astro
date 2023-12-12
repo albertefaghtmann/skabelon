@@ -1,16 +1,16 @@
 ---
 import Header from "./Header.astro";
-import Primarybutton from "./Primarybutton.astro";
 ---
 
 <Header />
 
 <div class="hero-image">
-  <img class="billede" src="/assets/images/infohero.webp" alt="" />
+  <img class="billede" src="/assets/images/herobillede_about.webp" alt="" />
   <div class="hero-text">
-    <p>KAMPAGNE</p>
-    <h1>Om plastikforurening og den globale plastiktraktat</h1>
-    <Primarybutton text="Skriv under" />
+    <h1>Om Plastic Change</h1>
+    <p>Plastic Change er en dansk miljøorganisation,</p>
+    <p>der kæmper for en verden</p>
+    <p>uden plastikforurening.</p>
   </div>
 </div>
 
@@ -18,6 +18,10 @@ import Primarybutton from "./Primarybutton.astro";
   .hero-image {
     position: relative;
     overflow: hidden; /* For at sikre, at .hero-text ikke overskrider billedet */
+  }
+
+  p {
+    color: var(--color-gray-20);
   }
 
   .billede {
@@ -35,10 +39,5 @@ import Primarybutton from "./Primarybutton.astro";
     color: #fff;
     width: 50%;
     z-index: 1;
-  }
-
-  .Primarybutton {
-    display: block;
-    margin-top: 10px;
   }
 </style>
