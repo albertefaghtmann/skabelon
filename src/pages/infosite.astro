@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import HeroInfo from "../components/HeroInfo.astro";
 import Primarybutton from "../components/Primarybutton.astro";
+import Talboks from "../components/Talboks.astro";
+import Secondarybutton from "../components/Secondarybutton.astro";
 ---
 
 <html lang="en">
@@ -37,7 +39,37 @@ import Primarybutton from "../components/Primarybutton.astro";
     <div class="center-wrapper">
       <h2>DU skal skrive under fordi:</h2>
     </div>
-    <section></section>
+    <section class="container2">
+      <img class="plastikaffaldsvg" src="assets/images/plastikaffald.svg" alt="" />
+      <div class="talboks1">
+        <Talboks text="1" text2="I 2050 er der med den nuværende udvikling forventligt mere plastik i havene end der er fisk. " />
+      </div>
+      <div class="talboks2">
+        <Talboks text="2" text2="Årligt udledes 8-15 millioner tons plastik til verdenshavene. Det svarer til en lastbil i minuttet og forventes fordoblet i 2025." />
+      </div>
+      <div class="talboks3">
+        <Talboks text="3" text2="Genanvender vi 1 kg plastik, kommer der ca. 2,2 kg CO2  mindre ud i atmosfæren." />
+      </div>
+    </section>
+    <p>Næppe overraskende arbejder olie,- petrokemikalie,- og plastikindustrien imod sådan et loft. De siger, at det ikke er nødvendigt, og de mener, at vi kan genanvende os ud af problemerne med plastik.</p>
+    <div class="center-wrapper">
+      <h3>I 2050 er der med den nuværende udvikling forventligt mere plastik i havene end der er fisk.</h3>
+    </div>
+    <div class="center-wrapper">
+      <img src="assets/images/fisk.png" alt="" />
+    </div>
+    <p>
+      Det blev vedtaget, at traktaten skal dække hele plastikkens livscyklus, det vil sige ikke kun den plastik, der allerede er endt som forurening, men også al den nye plastik, der bliver produceret. Dette er helt afgørende for at stoppe
+      forureningen.
+    </p>
+    <p>Over de næste to år skal verdens lande mødes og blive enige om traktatens konkrete indhold, før den endelig skal udformes til UNEA 6.0 i 2024.</p>
+    <h3>Kampen er derfor langt fra slut – din underskrift får stor betydning</h3>
+    <div class="center-wrapper">
+      <section class="container3">
+        <Secondarybutton href="/" text="Læs mere" />
+        <Primarybutton text="Skriv under" />
+      </section>
+    </div>
   </body>
 </html>
 
@@ -58,6 +90,12 @@ import Primarybutton from "../components/Primarybutton.astro";
     text-align: center;
     max-width: 60%;
   }
+
+  h3 {
+    padding-bottom: var(--spacing-vertical-large);
+    text-align: center;
+    max-width: 60%;
+  }
   .center-wrapper {
     display: flex;
     align-items: center;
@@ -66,5 +104,39 @@ import Primarybutton from "../components/Primarybutton.astro";
 
   .diagram {
     width: 40%;
+  }
+
+  .container2 {
+    position: relative;
+    width: 100%;
+  }
+
+  .plastikaffaldsvg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .talboks1,
+  .talboks2,
+  .talboks3 {
+    position: absolute;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .talboks1 {
+    top: 100px;
+    right: -500px;
+  }
+
+  .talboks2 {
+    top: 800px; /* Juster efter behov for at placere boksen under talboks1 */
+    left: 20px;
+  }
+
+  .talboks3 {
+    bottom: 600px;
+    right: -400px;
   }
 </style>
