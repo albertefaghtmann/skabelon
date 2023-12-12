@@ -9,8 +9,8 @@ import Secondarybutton from "./Secondarybutton.astro";
     <p>Vi har sendt en mail for at bekfræfte din underskrift</p>
   </div>
   <div class="buttons">
-    <Secondarybutton text="Læs mere her" />
-    <Primarybutton text="Støt nu" />
+    <Secondarybutton href="/infosite" text="Læs om kampagnen" />
+    <Primarybutton href="https://plasticchange.dk/giv-et-bidrag/" text="Støt nu" />
   </div>
 </section>
 
@@ -26,14 +26,17 @@ import Secondarybutton from "./Secondarybutton.astro";
     border-radius: 30px;
     background: var(--color-background-form);
   }
-
-  h3 {
+  .grouptext {
+    display: flex;
+    gap: var(--spacing-xxsmall);
+    flex-direction: column;
+  }
+  h3,
+  p {
     max-width: 320px;
   }
 
   p {
-    max-width: 236px;
-    text-align: center;
     font-family: "Rubik";
     font-size: 15px;
     line-height: normal;
