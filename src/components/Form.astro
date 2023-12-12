@@ -7,10 +7,13 @@ import Primarybutton from "./Primarybutton.astro";
   <h2>16.468</h2>
   <p>har allerede skrevet under!</p>
   <img src="/assets/images/form_linje.svg" alt="" />
-  <Primarybutton text="Skriv under" />
+  <Primarybutton href="/" text="Skriv under" />
 </section>
 
 <style>
+  img {
+    width: 90%;
+  }
   .form {
     display: flex;
     width: 370px;
@@ -20,6 +23,6 @@ import Primarybutton from "./Primarybutton.astro";
     justify-content: space-between;
     align-items: center;
     border-radius: 30px;
-    background: var(--color-gray-300);
+    background: var(--color-background-form);
   }
 </style>

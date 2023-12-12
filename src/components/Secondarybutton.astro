@@ -1,13 +1,13 @@
 ---
-const { text } = Astro.props;
+const { href, text } = Astro.props;
 ---
 
 <button class="secondarybutton">
-  <a>{text}</a>
+  <a href={href}>{text}</a>
 </button>
 
 <style>
-  button {
+  .secondarybutton {
     display: inline-flex;
     padding: var(--spacing-horisontal-button) var(--spacing-medium);
     justify-content: center;
@@ -16,14 +16,16 @@ const { text } = Astro.props;
     border-radius: var(--spacing-small);
     border: 3px solid var(--color-gray-50);
   }
-  button :hover {
+
+  .secondarybutton a {
+    text-decoration: none;
+    color: var(--color-text-secondarybutton-hover);
+  }
+  .secondarybutton:hover {
     background-color: var(--color-gray-20);
   }
 
-  a {
-    color: var(--color-text-secondarybutton-hover);
-  }
-  a:hover {
-    color: var(--color-text-secondarybutton-default);
+  .secondarybutton:hover a {
+    color: var(--color-text-primarybutton-hover);
   }
 </style>

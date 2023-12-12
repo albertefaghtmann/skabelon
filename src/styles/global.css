@@ -23,6 +23,7 @@ body {
   --color-gray-200: #a3a6b4;
   --color-gray-300: #70727e;
   --color-gray-400: #1c1e23;
+  --color-gray-500: rgba(0, 0, 0, 0.5);
   --color-gray-50: #f3f3f3;
   --color-red-100: #f481a6;
   --color-red-200: #fe417d;
@@ -46,6 +47,7 @@ body {
   --color-background-footer-footer: var(--color-blue-400);
   --color-background-primarybutton-default: var(--color-red-300);
   --color-background-primarybutton-hover: var(--color-gray-20);
+  --color-background-form: var(--color-gray-500);
   --color-logo-logo: var(--color-red-300);
   --color-text-footer-footer: var(--color-gray-20);
   --color-text-heading-heading: var(--color-gray-20);

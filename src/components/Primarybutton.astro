@@ -1,26 +1,33 @@
 ---
-const { text } = Astro.props;
+const { href, text } = Astro.props;
 ---
 
-<button>
-  <a>{text}</a>
+<button class="primarybutton">
+  <a href={href}>{text}</a>
 </button>
 
 <style>
-  button {
+  .primarybutton {
     padding: var(--spacing-horisontal-button) var(--spacing-medium);
     border: none;
+    justify-content: center;
+    align-items: center;
     border-radius: var(--spacing-small);
-    background: var(--color-background-primarybutton-default);
-    text-align: center;
+    background-color: var(--color-background-primarybutton-default);
     display: block;
     margin-top: var(--spacing-vertical-xsmall);
   }
-  button :hover {
-    background: var(--color-background-primarybutton-hover);
+
+  .primarybutton a {
+    text-decoration: none;
+    color: var(--color-text-primarybutton-default);
   }
-  a {
-    color: var(--color-text-linkbutton-default);
-    font-family: "Campton-Bold";
+
+  .primarybutton:hover {
+    background-color: var(--color-background-primarybutton-hover);
+  }
+
+  .primarybutton:hover a {
+    color: var(--color-text-primarybutton-hover);
   }
 </style>

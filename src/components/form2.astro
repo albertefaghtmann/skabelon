@@ -3,10 +3,29 @@ import Primarybutton from "./Primarybutton.astro";
 ---
 
 <section class="form">
-  <h3>Gør en forskel</h3>
-  <h4>Navn</h4>
-  <p>har allerede skrevet under!</p>
-  <img src="/assets/images/form_linje.svg" alt="" />
+  <h3>Gør en forskel!</h3>
+  <div class="text_input">
+    <div class="navn_input">
+      <label for="navn"><br />Navn<br /></label>
+      <input type="text" id="navn" name="navn" placeholder="Eksempel" />
+    </div>
+    <div class="mail_input">
+      <label for="mail"><br />Mail<br /></label>
+      <input id="mail" type="text" name="mail" />
+    </div>
+  </div>
+
+  <label class="checkboks"
+    >Accepter vilkår og <p class="underline">betingelser</p>*
+    <input type="checkbox" checked="checked" />
+    <span class="checkmark"></span>
+  </label>
+  <label class="checkboks"
+    >Modtag Plastic Changes nyhedsbrev
+    <input type="checkbox" />
+    <span class="checkmark"></span>
+  </label>
+
   <Primarybutton text="Skriv under" />
 </section>
 
@@ -20,6 +39,46 @@ import Primarybutton from "./Primarybutton.astro";
     justify-content: space-between;
     align-items: center;
     border-radius: 30px;
-    background: var(--color-gray-300);
+    background: var(--color-background-form);
+  }
+
+  .text_input .navn_input,
+  .text_input .mail_input {
+    text-align: start;
+  }
+
+  .text_input input {
+    width: 300px;
+    height: 40px;
+    padding: 0px 10px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 2px solid var(--color-gray-20);
+  }
+
+  .text_input input:focus {
+    outline: 2px solid #0048d9;
+    border-radius: 3px;
+  }
+
+  .text_input label {
+    color: var(--color-gray-20);
+    font-family: "Rubik";
+    font-size: 16px;
+  }
+
+  /*checkbox */
+  .checkboks {
+    color: var(--color-gray-20);
+    font-family: "Rubik";
+    font-size: 10px;
+  }
+
+  .underline {
+    color: var(--color-red-300);
+    display: inline;
+    font-family: "Rubik";
+    text-decoration: underline;
+    font-size: 10px;
   }
 </style>

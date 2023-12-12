@@ -1,13 +1,15 @@
 ---
 import Primarybutton from "./Primarybutton.astro";
+import Secondarybutton from "./Secondarybutton.astro";
 ---
 
 <section class="form">
-  <h3>Gør en forskel</h3>
-  <h2>16.468</h2>
-  <p>har allerede skrevet under!</p>
-  <img src="/assets/images/form_linje.svg" alt="" />
-  <Primarybutton text="Skriv under" />
+  <h3>Tak fordi du er med til at gøre en forskel!</h3>
+  <p>Vi har sendt en mail for at bekfræfte din underskrift</p>
+  <div class="buttons">
+    <Secondarybutton text="Læs mere her" />
+    <Primarybutton text="Støt nu" />
+  </div>
 </section>
 
 <style>
@@ -20,6 +22,11 @@ import Primarybutton from "./Primarybutton.astro";
     justify-content: space-between;
     align-items: center;
     border-radius: 30px;
-    background: var(--color-gray-300);
+    background: var(--color-background-form);
+  }
+
+  h3,
+  p {
+    max-width: 290px;
   }
 </style>
