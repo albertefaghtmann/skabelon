@@ -2,16 +2,16 @@
 import Primarybutton from "./Primarybutton.astro";
 ---
 
-<section class="form">
+<section class="form2">
   <h3>Gør en forskel!</h3>
   <div class="text_input">
     <div class="navn_input">
       <label for="navn"><br />Navn<br /></label>
-      <input type="text" id="navn" name="navn" placeholder="Eksempel" />
+      <input type="email" id="navn" name="navn" placeholder="Eksempel" required />
     </div>
     <div class="mail_input">
       <label for="mail"><br />Mail<br /></label>
-      <input type="text" id="mail" name="mail" placeholder="eksempel@mail.nu" />
+      <input type="text" id="mail" name="mail" placeholder="eksempel@mail.nu" required />
     </div>
   </div>
   <label class="checkboks">
@@ -30,7 +30,7 @@ import Primarybutton from "./Primarybutton.astro";
 </section>
 
 <style>
-  .form {
+  .form2 {
     display: flex;
     width: 370px;
     height: 430px;
@@ -52,6 +52,7 @@ import Primarybutton from "./Primarybutton.astro";
     height: 40px;
     padding: 0px 10px;
     background-color: transparent;
+    color: var(--color-gray-20);
     border-radius: 3px;
     border: 2px solid var(--color-gray-20);
   }

@@ -1,8 +1,8 @@
 ---
-const { href, text } = Astro.props;
+const { href, click, text } = Astro.props;
 ---
 
-<button class="primarybutton">
+<button onclick={click} class="primarybutton">
   <a href={href}>{text}</a>
 </button>
 
