@@ -146,21 +146,16 @@ import Footer from "../components/Footer.astro";
     position: absolute;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
   }
 
   .talboks1 {
-    top: 100px;
-    right: -500px;
   }
 
   .talboks2 {
-    top: 800px; /* Juster efter behov for at placere boksen under talboks1 */
-    left: 20px;
   }
 
   .talboks3 {
-    bottom: 600px;
-    right: -400px;
   }
 
   .tekstboks {
@@ -173,5 +168,32 @@ import Footer from "../components/Footer.astro";
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (max-width: 700px) {
+    .diagram {
+      width: 80%;
+    }
+
+    .fisk {
+      width: 90%;
+    }
+    .talboks1 {
+      top: 0px;
+      padding-left: 280px;
+    }
+
+    .talboks2 {
+      top: 200px;
+      padding-left: 10px;
+    }
+
+    .talboks3 {
+      bottom: 90px;
+      padding-left: 280px;
+    }
+    .plastikaffaldsvg {
+      width: 90%;
+    }
   }
 </style>
