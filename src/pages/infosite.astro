@@ -60,7 +60,7 @@ import Footer from "../components/Footer.astro";
     <div class="center-wrapper">
       <h3>I 2050 er der med den nuværende udvikling forventligt mere plastik i havene end der er fisk.</h3>
     </div>
-    <div class="center-wrapper">
+    <div class="fisk_img">
       <img src="assets/images/fisk.png" alt="" />
     </div>
     <div class="tesktsboks">
@@ -93,20 +93,19 @@ import Footer from "../components/Footer.astro";
   }
   p {
     padding-top: var(--spacing-vertical-xsmall);
-    max-width: 60%;
+    max-width: 80%;
     margin: auto;
   }
 
   h2 {
     padding-bottom: var(--spacing-vertical-large);
     padding-top: var(--spacing-vertical-xxlarge);
-    max-width: 60%;
+    max-width: 80%;
   }
 
   h3 {
     padding-bottom: var(--spacing-vertical-large);
-    text-align: center;
-    max-width: 60%;
+    max-width: 80%;
   }
 
   .overskrift-center {
@@ -135,8 +134,9 @@ import Footer from "../components/Footer.astro";
   }
 
   .plastikaffaldsvg {
-    width: 100%;
+    width: 95%;
     height: auto;
+    margin: auto;
     display: block;
   }
 
@@ -147,6 +147,7 @@ import Footer from "../components/Footer.astro";
     padding: 20px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: row-reverse;
   }
 
   .talboks1 {
@@ -170,14 +171,20 @@ import Footer from "../components/Footer.astro";
     justify-content: center;
   }
 
+  .fisk_img img {
+    width: 95%;
+    margin: auto;
+  }
+
   @media (max-width: 700px) {
     .diagram {
       width: 80%;
     }
-
-    .fisk {
-      width: 90%;
+    .fisk_img img {
+      width: 95%;
+      margin: auto;
     }
+
     .talboks1 {
       top: 0px;
       padding-left: 280px;
