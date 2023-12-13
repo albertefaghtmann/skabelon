@@ -25,15 +25,15 @@ import Header from "./Header.astro";
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 80%; /* Juster bredden efter behov */
-      padding: 15px; /* Tilføj et ekstra mellemrum inden for containeren */
-      text-align: center; /* Centerjuster tekst inden for containeren */
+      width: 80%;
+      padding: 15px;
+      text-align: center;
     }
 
     .tekst {
-      flex: 1; /* Gør .tekst flexibel, så den tager op så meget plads som muligt */
-      text-align: left; /* Venstrejuster tekst inden for .tekst */
-      margin-right: var(--spacing-xxlarge); /* Tilføj et mellemrum til højre af .tekst */
+      flex: 1;
+      text-align: left;
+      margin-right: var(--spacing-xxlarge);
     }
 
     .tekst p {
@@ -41,7 +41,7 @@ import Header from "./Header.astro";
     }
 
     .form {
-      flex: 1; /* Gør .form flexibel, så den tager op så meget plads som muligt */
+      flex: 1;
     }
 
     .billede {
@@ -55,18 +55,6 @@ import Header from "./Header.astro";
     .herounit {
       height: 853px;
     }
-
-    h3 {
-      max-width: 80%;
-    }
-
-    h2 {
-      max-width: 80%;
-    }
-
-    p {
-      max-width: 80%;
-    }
     .billede {
       width: 100%;
       height: 853px;
@@ -74,25 +62,25 @@ import Header from "./Header.astro";
     }
     .tekst {
       text-align: left;
-      margin-right: var(--spacing-xxlarge); /* Tilføj et mellemrum til højre af .tekst */
+      margin-right: var(--spacing-xxlarge);
     }
 
     .grid-container {
       position: relative;
       display: grid;
       grid-template-columns: 1fr;
-      padding: 15px; /* Tilføj et ekstra mellemrum inden for containeren */
+      padding: 15px;
       text-align: center;
     }
 
     .tekst {
       text-align: left;
-      margin-right: var(--spacing-xxlarge); /* Tilføj et mellemrum til højre af .tekst */
+      margin-right: var(--spacing-xxlarge);
       position: absolute;
       top: 50%;
       left: 30%;
       transform: translate(-50%, -291%);
-      z-index: 2; /* Placer tekst over billedet */
+      z-index: 2;
     }
 
     .form {
@@ -100,7 +88,7 @@ import Header from "./Header.astro";
       top: 50%;
       left: 50%;
       transform: translate(-50%, -115%);
-      z-index: 2; /* Placer form over billedet */
+      z-index: 2;
     }
   }
 </style>

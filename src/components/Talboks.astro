@@ -6,7 +6,7 @@ const { text, text2 } = Astro.props;
   <div class="faktaboks_rund">
     <h2>{text}</h2>
   </div>
-  <p>{text2}</p>
+  <p class="faktap">{text2}</p>
 </section>
 
 <style>
@@ -24,7 +24,7 @@ const { text, text2 } = Astro.props;
   }
 
   /*button text small*/
-  p {
+  .faktap {
     color: var(--color-text-heading-heading);
     line-height: 1.4rem;
     width: 30%;
