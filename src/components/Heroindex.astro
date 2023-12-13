@@ -1,5 +1,5 @@
 ---
-import Form3 from "../components/Form3.astro";
+import Form from "../components/Form.astro";
 import Header from "./Header.astro";
 ---
 
@@ -12,7 +12,7 @@ import Header from "./Header.astro";
     <h2>Skriv under og vær med i kampen for en global plastiktraktat</h2>
   </div>
   <div class="form">
-    <Form3 />
+    <Form />
   </div>
 </div>
 
@@ -55,6 +55,18 @@ import Header from "./Header.astro";
     .herounit {
       height: 853px;
     }
+
+    h3 {
+      max-width: 80%;
+    }
+
+    h2 {
+      max-width: 80%;
+    }
+
+    p {
+      max-width: 80%;
+    }
     .billede {
       width: 100%;
       height: 853px;
@@ -78,8 +90,8 @@ import Header from "./Header.astro";
       margin-right: var(--spacing-xxlarge); /* Tilføj et mellemrum til højre af .tekst */
       position: absolute;
       top: 50%;
-      left: 32%;
-      transform: translate(-50%, -373%);
+      left: 30%;
+      transform: translate(-50%, -291%);
       z-index: 2; /* Placer tekst over billedet */
     }
 
