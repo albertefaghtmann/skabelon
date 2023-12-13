@@ -48,51 +48,113 @@ import Primarybutton from "../components/Primarybutton.astro";
 </html>
 
 <style>
-  .section1_faktaboks {
-    display: flex;
-    gap: var(--spacing-gap-gap);
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-top: var(--spacing-vertical-large);
-    padding-bottom: var(--spacing-vertical-xxlarge);
-  }
-  h2 {
-    padding-top: var(--spacing-vertical-xxlarge);
-    text-align: center;
-  }
-  h3 {
-    max-width: 58%;
-    padding-bottom: var(--spacing-vertical-large);
-  }
-
-  .container1 {
-    display: flex;
-    justify-content: center;
-  }
-  .container2 {
-    text-align: center;
-    padding-top: var(--spacing-vertical-large);
-  }
-  .gridcontainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
   .overskrift1,
   .overskrift2 {
     text-align: center;
     color: var(--color-red-300);
   }
 
-  .center-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /*web*/
+
+  @media (min-width: 700px) {
+    .section1_faktaboks {
+      display: flex;
+      gap: var(--spacing-gap-gap);
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-top: var(--spacing-vertical-large);
+      padding-bottom: var(--spacing-vertical-xxlarge);
+    }
+    h2 {
+      padding-top: var(--spacing-vertical-xxlarge);
+      text-align: center;
+    }
+    h3 {
+      max-width: 58%;
+      padding-bottom: var(--spacing-vertical-large);
+    }
+
+    .container1 {
+      display: flex;
+      justify-content: center;
+    }
+    .container2 {
+      text-align: center;
+      padding-top: var(--spacing-vertical-large);
+    }
+    .gridcontainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .center-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
-  @media (max-width: 600px) {
+  /*mobile*/
+  @media (max-width: 700px) {
     .gridcontainer {
       grid-template-columns: 1fr;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3 {
+      max-width: 80%;
+      padding-bottom: var(--spacing-vertical-large);
+    }
+    h2 {
+      max-width: 80%;
+      padding-top: var(--spacing-vertical-xxlarge);
+      text-align: center;
+    }
+    p {
+      max-width: 80%;
+    }
+
+    .section1_faktaboks {
+      display: grid;
+      gap: var(--spacing-gap-gap);
+      justify-content: center;
+      padding-top: var(--spacing-vertical-large);
+      padding-bottom: var(--spacing-vertical-xxlarge);
+    }
+
+    .overskrift1,
+    .overskrift2 {
+      text-align: center;
+      color: var(--color-red-300);
+      order: 0; /* Nulstil rækkefølgen */
+    }
+    .container1 {
+      display: flex;
+      justify-content: center;
+    }
+    .container2 {
+      text-align: center;
+      padding-top: var(--spacing-vertical-large);
+    }
+
+    .overskrift1 {
+      order: 0;
+    }
+
+    .lidtflasker {
+      order: 1; /* .lidtflasker kommer først */
+      padding-bottom: var(--spacing-vertical-large);
+    }
+
+    .overskrift2 {
+      order: 2; /* .overskrift2 kommer efter .lidtflasker */
+    }
+
+    .mangeflasker {
+      order: 3; /* .mangeflasker kommer sidst */
     }
 
     .mangeflasker,
@@ -100,13 +162,10 @@ import Primarybutton from "../components/Primarybutton.astro";
       width: 50%;
     }
 
-    .container1,
-    .container2 {
-      display: block; /* Skifter til blokdisplay på mindre skærme */
-    }
-
     .center-wrapper {
-      text-align: center; /* Centerjuster indholdet i center-wrapper */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 </style>
