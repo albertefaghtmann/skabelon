@@ -34,13 +34,13 @@ import Footer from "../components/Footer.astro";
       <Primarybutton href="/" text="Skriv under" />
     </div>
     <div class="center-wrapper">
-      <h2>Hvor ender plastemballagen?</h2>
+      <h2 class="tekstanimation">Hvor ender plastemballagen?</h2>
     </div>
     <div class="center-wrapper">
       <img class="diagram" src="/assets/images/diagram2.png" alt="" />
     </div>
     <div class="center-wrapper">
-      <h2>DU skal skrive under fordi:</h2>
+      <h2 class="tekstanimation2">DU skal skrive under fordi:</h2>
     </div>
     <section class="container2">
       <img class="plastikaffaldsvg" src="assets/images/plastikaffald.svg" alt="" />
@@ -204,3 +204,38 @@ import Footer from "../components/Footer.astro";
     }
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".tekstanimation", {
+    xPercent: -50,
+    opacity: 3,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".tekstanimation",
+      start: "start 110%",
+      end: "bottom 10%",
+      scrub: true,
+      //markers: true,
+    },
+  });
+
+  gsap.from(".tekstanimation2", {
+    xPercent: -50,
+    opacity: 3,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".tekstanimation2",
+      start: "start 110%",
+      end: "bottom 10%",
+      scrub: true,
+      //markers: true,
+    },
+  });
+</script>

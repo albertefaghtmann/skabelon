@@ -18,7 +18,7 @@ import Primarybutton from "../components/Primarybutton.astro";
   <body>
     <Heroindex />
     <section>
-      <h2>Vi arbejder konkret for, at traktaten:</h2>
+      <h2 class="tekstanimation">Vi arbejder konkret for, at traktaten:</h2>
       <div class="section1_faktaboks">
         <Faktaboksrund text="Sikre et loft over den globale plastikproduktion" />
         <Faktaboksrund text="Sikre en bæredygtig produktion og cirkularitet" />
@@ -184,4 +184,27 @@ import Primarybutton from "../components/Primarybutton.astro";
   }
 </style>
 
+<<<<<<< HEAD
 <script></script>
+=======
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".tekstanimation", {
+    xPercent: -50,
+    opacity: 3,
+    duration: 1,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".tekstanimation",
+      start: "start 110%",
+      end: "bottom 10%",
+      scrub: true,
+      //markers: true,
+    },
+  });
+</script>
+>>>>>>> animationer-alb
