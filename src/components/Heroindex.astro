@@ -4,68 +4,91 @@ import Header from "./Header.astro";
 ---
 
 <Header />
-<div class="herounit">
-  <img class="billede" src="/assets/images/indexbillede.webp" alt="" />
-  <div class="grid-container">
-    <div class="tekst">
-      <p>KAMPAGNE</p>
-      <h2>Skriv under og vær med i kampen for en global plastiktraktat</h2>
-    </div>
-    <div class="form">
-      <Form3 />
-    </div>
+
+<img class="billede" src="/assets/images/indexbillede.webp" alt="" />
+<div class="grid-container">
+  <div class="tekst">
+    <p>KAMPAGNE</p>
+    <h2>Skriv under og vær med i kampen for en global plastiktraktat</h2>
+  </div>
+  <div class="form">
+    <Form3 />
   </div>
 </div>
 
 <style>
-  .herounit {
-    position: relative;
-  }
-
-  .grid-container {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%; /* Juster bredden efter behov */
-    padding: 15px; /* Tilføj et ekstra mellemrum inden for containeren */
-    text-align: center; /* Centerjuster tekst inden for containeren */
-  }
-
-  .tekst {
-    flex: 1; /* Gør .tekst flexibel, så den tager op så meget plads som muligt */
-    text-align: left; /* Venstrejuster tekst inden for .tekst */
-    margin-right: var(--spacing-xxlarge); /* Tilføj et mellemrum til højre af .tekst */
-  }
-
-  .tekst p {
-    margin: 0;
-  }
-
-  .form {
-    flex: 1; /* Gør .form flexibel, så den tager op så meget plads som muligt */
-  }
-
-  .billede {
-    width: 100%; /* Sørg for, at billedet fylder hele bredden af .herounit */
-    height: auto;
-  }
-
-  @media (max-width: 600px) {
-    .billede {
-      width: 150%; /* Sørg for, at billedet fylder hele bredden af .herounit */
-      height: auto;
-      display: block;
-    }
-
+  /*web*/
+  @media (min-width: 700px) {
     .grid-container {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%; /* Juster bredden efter behov */
+      padding: 15px; /* Tilføj et ekstra mellemrum inden for containeren */
+      text-align: center; /* Centerjuster tekst inden for containeren */
     }
 
     .tekst {
-      padding-top: var(--spacing-xxlarge);
+      flex: 1; /* Gør .tekst flexibel, så den tager op så meget plads som muligt */
+      text-align: left; /* Venstrejuster tekst inden for .tekst */
+      margin-right: var(--spacing-xxlarge); /* Tilføj et mellemrum til højre af .tekst */
+    }
+
+    .tekst p {
+      margin: 0;
+    }
+
+    .form {
+      flex: 1; /* Gør .form flexibel, så den tager op så meget plads som muligt */
+    }
+
+    .billede {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  /*mobile*/
+  @media (max-width: 700px) {
+    .herounit {
+      height: 853px;
+    }
+    .billede {
+      width: 100%;
+      height: 853px;
+      object-fit: cover;
+    }
+    .tekst {
+      text-align: left;
+      margin-right: var(--spacing-xxlarge); /* Tilføj et mellemrum til højre af .tekst */
+    }
+
+    .grid-container {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 15px; /* Tilføj et ekstra mellemrum inden for containeren */
+      text-align: center;
+    }
+
+    .tekst {
+      text-align: left;
+      margin-right: var(--spacing-xxlarge); /* Tilføj et mellemrum til højre af .tekst */
+      position: absolute;
+      top: 50%;
+      left: 32%;
+      transform: translate(-50%, -373%);
+      z-index: 2; /* Placer tekst over billedet */
+    }
+
+    .form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -115%);
+      z-index: 2; /* Placer form over billedet */
     }
   }
 </style>
