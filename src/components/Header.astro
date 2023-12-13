@@ -4,7 +4,7 @@ import Headingbutton from "./Headingbutton.astro";
 
 <div id="mainmenu">
   <div class="logo">
-    <a href="/"> <img class="logo_img" src="/assets/images/logo.png" alt="plastic change logo" /></a>
+    <a href="/"> <img class="logo_img" src="/assets/images/logo.svg" alt="plastic change logo" /></a>
   </div>
   <div id="burger-menu">
     <span></span>
@@ -21,15 +21,16 @@ import Headingbutton from "./Headingbutton.astro";
 <style>
   #mainmenu {
     display: flex;
+    width: 100%;
     position: fixed;
-    z-index: 1000;
+    z-index: 100;
     background-color: transparent;
     justify-content: space-between;
     padding: var(--spacing-xxsmall);
   }
 
   .logo img {
-    width: 20%;
+    width: 60%;
   }
 
   #menu {
@@ -49,35 +50,20 @@ import Headingbutton from "./Headingbutton.astro";
     color: var(--color-text-linkbutton-hover);
   }
 
-  @media (max-width: 600px) {
-    .logo {
-      width: 100%;
-      z-index: 3;
-    }
+  /*mobil*/
 
-    .logo img {
-      width: 1000%;
-    }
+  @media (max-width: 700px) {
     #menu {
       display: flex;
       flex-direction: column;
       text-align: center;
       align-items: center;
-      gap: var(--spacing-gap-gap);
+      width: 100%;
+    }
+    .logo img {
+      width: 40%;
     }
 
-    #mainmenu {
-      display: grid;
-    }
-    #mainmenu > * {
-      grid-column: 1;
-      grid-row: 1;
-    }
-    .logo {
-      width: 5%;
-      padding: 7px;
-      z-index: 3;
-    }
     #burger-menu {
       border: none;
       cursor: pointer;
@@ -90,7 +76,6 @@ import Headingbutton from "./Headingbutton.astro";
       background: var(--color-red-300);
       display: block;
       height: 4px;
-      opacity: 1;
       position: absolute;
       transition: 0.3s ease-in-out;
       content: "";
@@ -101,8 +86,8 @@ import Headingbutton from "./Headingbutton.astro";
       width: 55px;
     }
     #burger-menu span {
-      right: 0px;
-      top: 13px;
+      right: 10px;
+      top: 25px;
       width: 55px;
     }
     #burger-menu span:after {
@@ -118,7 +103,8 @@ import Headingbutton from "./Headingbutton.astro";
     }
     #burger-menu.close span {
       transform: rotate(-32deg);
-      top: 13px;
+      top: 25px;
+      right: 10px;
       width: 65px;
       background: var(--color-red-300);
     }
@@ -135,13 +121,8 @@ import Headingbutton from "./Headingbutton.astro";
       min-width: 100%;
       min-height: 100%;
       position: fixed;
-      top: 0;
-      height: 0;
       visibility: hidden;
       opacity: 0;
-      text-align: left;
-      padding-top: 20px;
-      padding-left: 100px;
       transition: all 0.3s ease-in-out;
     }
     #menu.overlay {

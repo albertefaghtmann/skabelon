@@ -58,7 +58,7 @@ import Heroabout from "../components/Heroabout.astro";
   }
   .section1 {
     justify-content: center;
-    padding-block: var(--spacing-vertical-xxlarge);
+    padding-block: var(--spacing-vertical-large);
   }
   .faktaboks {
     display: flex;
@@ -74,5 +74,11 @@ import Heroabout from "../components/Heroabout.astro";
   }
   .container2 {
     text-align: center;
+  }
+
+  @media (max-width: 700px) {
+    p {
+      max-width: 80%;
+    }
   }
 </style>
