@@ -122,7 +122,7 @@ body {
     font-size: 1.2rem;
     line-height: 1.8rem;
     color: var(--color-text-p-p);
-    max-width: 55%;
+    width: 45%;
   }
 }
 
@@ -140,7 +140,7 @@ body {
     font-family: "Campton-Bold";
     line-height: 2.9rem;
     color: var(--color-text-heading-heading);
-    max-width: 80%;
+    max-width: 90%;
   }
   h2 {
     font-size: 1.8rem;

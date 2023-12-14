@@ -9,7 +9,7 @@ import Header from "./Header.astro";
 <div class="grid-container">
   <div class="tekst">
     <p>KAMPAGNE</p>
-    <h2>Skriv under og vær med i kampen for en global plastiktraktat</h2>
+    <h1>Skriv under og vær med i kampen for en global plastiktraktat</h1>
   </div>
   <div class="form">
     <Form />
@@ -31,13 +31,15 @@ import Header from "./Header.astro";
     }
 
     .tekst {
-      flex: 1;
+      flex: 2;
       text-align: left;
       margin-right: var(--spacing-xxlarge);
+      max-width: 50%;
     }
 
     .tekst p {
       margin: 0;
+      color: var(--color-gray-50);
     }
 
     .form {
@@ -62,7 +64,7 @@ import Header from "./Header.astro";
     }
     .tekst {
       text-align: left;
-      margin-right: var(--spacing-xxlarge);
+      margin-left: var(--spacing-large);
     }
 
     .grid-container {
