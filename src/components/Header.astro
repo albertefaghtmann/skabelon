@@ -4,15 +4,34 @@ import Headingbutton from "./Headingbutton.astro";
 
 <div id="mainmenu">
   <div class="logo">
-    <a href="/"> <img class="logo_img" src="/assets/images/logo.svg" alt="plastic change logo" /></a>
+    <a href="/">
+      <img
+        class="logo_img"
+        src="/assets/images/logo.svg"
+        alt="plastic change logo"
+      /></a
+    >
   </div>
+
   <div id="burger-menu">
     <span></span>
   </div>
   <nav id="menu">
+    <div class="logo_burgermenu">
+      <a href="/">
+        <img
+          class="logo_img"
+          src="/assets/images/logo.svg"
+          alt="plastic change logo"
+        /></a
+      >
+    </div>
     <a href="/infosite">Om kampagnen</a>
     <a href="/about">Om os</a>
-    <Headingbutton text="støt nu" href="https://plasticchange.dk/giv-et-bidrag/" />
+    <Headingbutton
+      text="støt nu"
+      href="https://plasticchange.dk/giv-et-bidrag/"
+    />
   </nav>
 </div>
 <script src="../scripts/burger.js"></script>
@@ -49,6 +68,9 @@ import Headingbutton from "./Headingbutton.astro";
 
   a:hover {
     color: var(--color-text-linkbutton-hover);
+  }
+  /*.logo_burgermenu {
+    display: none;
   }
 
   /*mobil*/
