@@ -15,7 +15,10 @@ import Heroabout from "../components/Heroabout.astro";
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&family=Montserrat+Alternates&family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&family=Montserrat+Alternates&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>about</title>
   </head>
   <body>
@@ -24,24 +27,58 @@ import Heroabout from "../components/Heroabout.astro";
       <div class="center-wrapper">
         <h2 class="tekstanimation">Hvem er vi?</h2>
       </div>
-      <p>Plastic Change er en dansk miljøorganisation, der arbejder både i Danmark og internationalt på at gøre opmærksom på konsekvenserne af de voksende mængder plastik i havene og miljøet.</p>
-      <p>Plastic Change blev stiftet i foråret 2014 af miljøbiolog og miljøforkæmper Henrik Beha Pedersen, der i dag er bestyrelsesformand.</p>
-      <p>Vi arbejder for at knække den stigende kurve for plastikforurening og plastikproduktion. Derfor fokuserer vi på, at vi skal reducere vores forbrug af især engangsplastik og anvende plastik smartere.</p>
+      <p>
+        Plastic Change er en dansk miljøorganisation, der arbejder både i
+        Danmark og internationalt på at gøre opmærksom på konsekvenserne af de
+        voksende mængder plastik i havene og miljøet.
+      </p>
+      <p>
+        Plastic Change blev stiftet i foråret 2014 af miljøbiolog og
+        miljøforkæmper Henrik Beha Pedersen, der i dag er bestyrelsesformand.
+      </p>
+      <p>
+        Vi arbejder for at knække den stigende kurve for plastikforurening og
+        plastikproduktion. Derfor fokuserer vi på, at vi skal reducere vores
+        forbrug af især engangsplastik og anvende plastik smartere.
+      </p>
     </section>
     <section class="section2">
       <div class="center-wrapper">
         <h3 class="tekstanimation2">Hvordan arbejder vi?</h3>
       </div>
       <div class="faktaboks">
-        <Faktaboks img="/assets/images/billede_faktaboks1.webp" alt="demonstrationskilt" text="Vi arbejder for politisk og grøn lovgivning" href="https://plasticchange.dk/politisk-arbejde/" />
-        <Faktaboks img="/assets/images/billede_faktaboks2.webp" alt="Carlsberg øl" text="Vi samarbejder med virksomheder om en bæredygtig fremtid " href="https://plasticchange.dk/virksomheder/" />
-        <Faktaboks img="/assets/images/billede_faktaboks3.webp" alt="" text="Vi afholder events og workshops for at indrage folk i vores arbejde" href="https://plasticchange.dk/world-cleanup-day/" />
-        <Faktaboks img="/assets/images/billede_faktaboks4.webp" alt="" text="Vi underviser for at vise vejen for den kommende generation" href="https://plasticchange.dk/undervisning/" />
+        <Faktaboks
+          img="/assets/images/billede_faktaboks1.webp"
+          alt="demonstrationskilt"
+          text="Vi arbejder for politisk og grøn lovgivning"
+          href="https://plasticchange.dk/politisk-arbejde/"
+        />
+        <Faktaboks
+          img="/assets/images/billede_faktaboks2.webp"
+          alt="Carlsberg øl"
+          text="Vi samarbejder med virksomheder om en bæredygtig fremtid "
+          href="https://plasticchange.dk/virksomheder/"
+        />
+        <Faktaboks
+          img="/assets/images/billede_faktaboks3.webp"
+          alt=""
+          text="Vi afholder events og workshops for at indrage folk i vores arbejde"
+          href="https://plasticchange.dk/world-cleanup-day/"
+        />
+        <Faktaboks
+          img="/assets/images/billede_faktaboks4.webp"
+          alt=""
+          text="Vi underviser for at vise vejen for den kommende generation"
+          href="https://plasticchange.dk/undervisning/"
+        />
       </div>
     </section>
     <div class="center-wrapper">
       <section class="container2">
-        <Secondarybutton href="https://plasticchange.dk/medarbejdere/" text="Mød vores team" />
+        <Secondarybutton
+          href="https://plasticchange.dk/medarbejdere/"
+          text="Mød vores team"
+        />
         <Primarybutton href="/" text="Skriv under" />
       </section>
     </div>
@@ -69,6 +106,7 @@ import Heroabout from "../components/Heroabout.astro";
     gap: var(--spacing-xsmall);
     justify-content: center;
     padding-bottom: var(--spacing-vertical-large);
+    padding-top: var(--spacing-vertical-large);
   }
   .center-wrapper {
     display: flex;
