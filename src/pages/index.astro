@@ -171,6 +171,30 @@ import Primarybutton from "../components/Primarybutton.astro";
 
   gsap.registerPlugin(ScrollTrigger);
 
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+    gsap.from(".section1_faktaboks", {
+      scrollTrigger: {
+        trigger: ".section1_faktaboks",
+        start: "start 100%",
+        end: "bottom top",
+        scrub: true,
+      },
+      opacity: 0,
+      duration: 3,
+    });
+
+    gsap.to(".section1_faktaboks", {
+      scrollTrigger: {
+        trigger: ".section1_faktaboks",
+        start: "start top",
+        end: "start top",
+        scrub: true,
+      },
+      opacity: 100,
+      duration: 3,
+    });
+  });
+
   gsap.from(".tekstanimation", {
     xPercent: -50,
     opacity: 3,
