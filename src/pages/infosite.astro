@@ -245,4 +245,46 @@ import Footer from "../components/Footer.astro";
       //markers: true,
     },
   });
+
+  gsap.from(".talboks1", {
+    yPercent: -100,
+    opacity: 3,
+    duration: 2,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".talboks1",
+      start: "start 150%",
+      end: "bottom 10%",
+      scrub: true,
+      //markers: true,
+    },
+  });
+
+  gsap.from(".talboks2", {
+    yPercent: -100,
+    opacity: 3,
+    duration: 2,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".talboks2",
+      start: "start 110%",
+      end: "bottom 10%",
+      scrub: true,
+      //markers: true,
+    },
+  });
+
+  gsap.from(".talboks3", {
+    yPercent: -100,
+    opacity: 3,
+    duration: 2,
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".talboks3",
+      start: "start 110%",
+      end: "bottom 10%",
+      scrub: true,
+      //markers: true,
+    },
+  });
 </script>
