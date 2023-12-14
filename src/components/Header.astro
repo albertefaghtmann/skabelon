@@ -4,13 +4,7 @@ import Headingbutton from "./Headingbutton.astro";
 
 <div id="mainmenu">
   <div class="logo">
-    <a href="/">
-      <img
-        class="logo_img"
-        src="/assets/images/logo.svg"
-        alt="plastic change logo"
-      /></a
-    >
+    <a href="/"> <img class="logo_img" src="/assets/images/logo.svg" alt="plastic change logo" /></a>
   </div>
 
   <div id="burger-menu">
@@ -18,150 +12,154 @@ import Headingbutton from "./Headingbutton.astro";
   </div>
   <nav id="menu">
     <div class="logo_burgermenu">
-      <a href="/">
-        <img
-          class="logo_img"
-          src="/assets/images/logo.svg"
-          alt="plastic change logo"
-        /></a
-      >
+      <a href="/"> <img class="logo_img" src="/assets/images/logo.svg" alt="plastic change logo" /></a>
     </div>
     <a href="/infosite">Om kampagnen</a>
     <a href="/about">Om os</a>
-    <Headingbutton
-      text="støt nu"
-      href="https://plasticchange.dk/giv-et-bidrag/"
-    />
+    <Headingbutton text="støt nu" href="https://plasticchange.dk/giv-et-bidrag/" />
+    <div class="logo_mobil">
+      <a href="/"><img class="logo_mobilimg" src="/assets/images/logo.svg" alt="plastic change logo" /></a>
+    </div>
   </nav>
-</div>
-<script src="../scripts/burger.js"></script>
 
-<style>
-  #mainmenu {
-    width: 100%;
-    display: flex;
-    position: fixed;
-    align-items: center;
-    background-color: transparent;
-    justify-content: space-between;
-    z-index: 10;
-  }
+  <script src="../scripts/burger.js"></script>
 
-  .logo img {
-    width: 60%;
-    height: 100%;
-    padding-inline-start: var(--spacing-xxsmall);
-  }
+  <style>
+    #mainmenu {
+      width: 100%;
+      display: flex;
+      position: fixed;
+      align-items: center;
+      background-color: transparent;
+      justify-content: space-between;
+      z-index: 10;
+    }
 
-  #menu {
-    display: flex;
-    text-wrap: nowrap;
-    align-items: center;
-    gap: var(--spacing-gap-gap);
-    padding: var(--spacing-xxsmall);
-  }
+    .logo img {
+      width: 60%;
+      height: 100%;
+      padding-inline-start: var(--spacing-xxsmall);
+    }
 
-  a {
-    text-decoration: none;
-    color: var(--color-text-linkbutton-default);
-  }
+    #menu {
+      display: flex;
+      text-wrap: nowrap;
+      align-items: center;
+      gap: var(--spacing-gap-gap);
+      padding: var(--spacing-xxsmall);
+    }
 
-  a:hover {
-    color: var(--color-text-linkbutton-hover);
-  }
-  /*.logo_burgermenu {
+    a {
+      text-decoration: none;
+      color: var(--color-text-linkbutton-default);
+    }
+
+    a:hover {
+      color: var(--color-text-linkbutton-hover);
+    }
+    /*.logo_burgermenu {
     display: none;
   }
 
   /*mobil*/
-
-  @media (max-width: 700px) {
-    #menu {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      width: 100%;
+    @media (min-width: 700px) {
+      .logo_mobil {
+        display: none;
+      }
     }
 
-    .logo img {
-      padding: 0;
-    }
+    @media (max-width: 700px) {
+      #menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+      }
 
-    #burger-menu {
-      border: none;
-      cursor: pointer;
-      z-index: 3;
-    }
+      .logo img {
+        padding: 0;
+      }
 
-    #burger-menu span,
-    #burger-menu span:before,
-    #burger-menu span:after {
-      background: var(--color-red-300);
-      display: block;
-      height: 4px;
-      position: absolute;
-      transition: 0.3s ease-in-out;
-      content: "";
-    }
-    #burger-menu span:before {
-      left: 0px;
-      top: -10px;
-      width: 55px;
-    }
-    #burger-menu span {
-      right: 10px;
-      top: 25px;
-      width: 55px;
-    }
-    #burger-menu span:after {
-      left: 0px;
-      top: 10px;
-      width: 55px;
-    }
-    #burger-menu.close span:before {
-      top: 0px;
-      transform: rotate(65deg);
-      width: 65px;
-      background: var(--color-red-300);
-    }
-    #burger-menu.close span {
-      transform: rotate(-32deg);
-      top: 25px;
-      right: 10px;
-      width: 65px;
-      background: var(--color-red-300);
-    }
-    #burger-menu.close span:after {
-      top: 0px;
-      left: 0;
-      transform: rotate(65deg);
-      opacity: 0;
-      width: 0;
-      background: var(--color-red-300);
-    }
-    #menu {
-      min-width: 100%;
-      min-height: 100%;
-      visibility: hidden;
-      text-align: center;
-      z-index: 1;
-      opacity: 0;
-      transition: all 0.3s ease-in-out;
-    }
-    #menu.overlay {
-      visibility: visible;
-      opacity: 10;
-      padding-top: 100px;
-      padding-bottom: 800px;
-      background: var(--color-background-body-body);
-    }
+      .logo_mobil {
+        display: inline;
+        width: 50%;
+      }
+      #burger-menu {
+        border: none;
+        cursor: pointer;
+        z-index: 3;
+      }
 
-    #menu a {
-      list-style: none;
-      display: block;
-      visibility: visible;
-      z-index: 3000;
+      #burger-menu span,
+      #burger-menu span:before,
+      #burger-menu span:after {
+        background: var(--color-red-300);
+        display: block;
+        height: 4px;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+        content: "";
+      }
+      #burger-menu span:before {
+        left: 0px;
+        top: -10px;
+        width: 55px;
+      }
+      #burger-menu span {
+        right: 10px;
+        top: 25px;
+        width: 55px;
+      }
+      #burger-menu span:after {
+        left: 0px;
+        top: 10px;
+        width: 55px;
+      }
+      #burger-menu.close span:before {
+        top: 0px;
+        transform: rotate(65deg);
+        width: 65px;
+        background: var(--color-red-300);
+      }
+      #burger-menu.close span {
+        transform: rotate(-32deg);
+        top: 25px;
+        right: 10px;
+        width: 65px;
+        background: var(--color-red-300);
+      }
+      #burger-menu.close span:after {
+        top: 0px;
+        left: 0;
+        transform: rotate(65deg);
+        opacity: 0;
+        width: 0;
+        background: var(--color-red-300);
+      }
+      #menu {
+        min-width: 100%;
+        min-height: 100%;
+        visibility: hidden;
+        text-align: center;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+      #menu.overlay {
+        visibility: visible;
+        opacity: 10;
+        padding-top: 100px;
+        padding-bottom: 800px;
+        background: var(--color-background-body-body);
+      }
+
+      #menu a {
+        list-style: none;
+        display: block;
+        visibility: visible;
+        z-index: 3000;
+      }
     }
-  }
-</style>
+  </style>
+</div>
