@@ -17,7 +17,7 @@ import Primarybutton from "./Primarybutton.astro";
 <style>
   .hero-image {
     position: relative;
-    overflow: hidden; /* For at sikre, at .hero-text ikke overskrider billedet */
+    overflow: hidden;
   }
 
   h1 {
@@ -47,7 +47,7 @@ import Primarybutton from "./Primarybutton.astro";
 
   .Primarybutton {
     display: block;
-    margin-top: 10px;
+    margin-top: var(--spacing-xxsmall);
   }
 
   @media (max-width: 700px) {

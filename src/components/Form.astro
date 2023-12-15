@@ -20,11 +20,11 @@ import Primarybutton from "./Primarybutton.astro";
     display: flex;
     width: 370px;
     height: 430px;
-    padding: var(--spacing-medium, 40px) 0px;
+    padding: var(--spacing-medium) 0px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-radius: 30px;
+    border-radius: var(--spacing-small);
     background: var(--color-background-form);
   }
 
@@ -40,6 +40,7 @@ import Primarybutton from "./Primarybutton.astro";
     font-family: "Rubik";
     font-size: 13px;
     width: 100%;
+    padding-top: var(--spacing-xxsmall);
   }
 
   .grouptext {
