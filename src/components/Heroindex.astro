@@ -17,6 +17,10 @@ import Header from "./Header.astro";
 </div>
 
 <style>
+  .tekst p {
+    margin: 0;
+    color: var(--color-gray-50);
+  }
   /*web*/
   @media (min-width: 700px) {
     .grid-container {
@@ -25,21 +29,18 @@ import Header from "./Header.astro";
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 80%;
+      width: 100%;
       padding: 15px;
       text-align: center;
+      gap: var(--spacing-gap-gap);
     }
 
     .tekst {
       flex: 2;
+      padding-inline-start: var(--spacing-vertical-large);
       text-align: left;
-      margin-right: var(--spacing-xxlarge);
-      max-width: 50%;
-    }
-
-    .tekst p {
-      margin: 0;
-      color: var(--color-gray-50);
+      padding-top: 8%;
+      max-width: 60%;
     }
 
     .form {
